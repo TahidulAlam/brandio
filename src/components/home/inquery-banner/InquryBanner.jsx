@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const InquryBanner = () => {
   return (
-    <div className="relative h-[600px]">
+    <div className="relative h-[750px] lg:h-[600px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -15,15 +15,18 @@ const InquryBanner = () => {
           className="object-cover"
         />
       </div>
+
       {/* Content Container */}
-      <div className="relative z-10 flex w-full items-center h-full p-10">
-        <div className="w-1/2 flex justify-center items-center">
-          <h2 className="text-5xl font-bold text-black mb-6 mt-10">
+      <div className="relative z-10 flex flex-col lg:flex-row w-full items-center h-full p-5 lg:p-10">
+        {/* Text Section */}
+        <div className="w-full lg:w-1/2 flex justify-center items-center text-center lg:text-left">
+          <h2 className="text-3xl lg:text-5xl font-bold text-black mb-6 mt-10">
             Have a Project <br /> Idea?
           </h2>
         </div>
-        {/* Slider Component */}
-        <div className="w-1/2 h-full">
+
+        {/* Form Section */}
+        <div className="w-full lg:w-1/2 h-full mt-8 lg:mt-0">
           <InqueryForm />
         </div>
       </div>

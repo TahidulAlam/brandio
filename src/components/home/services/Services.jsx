@@ -71,7 +71,7 @@ export default function Services() {
   };
 
   return (
-    <div className="w-full max-w-[80%] mx-auto rounded-lg bg-[#000000] p-3 *:mix-blend-difference">
+    <div className="w-full lg:max-w-[80%] max-w-[90%] mx-auto rounded-lg bg-[#000000] p-3 *:mix-blend-difference">
       {dataArr.map((PerAccordion, idx) => (
         <ServicesCard
           key={idx}

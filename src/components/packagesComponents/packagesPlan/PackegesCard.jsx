@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
-import PackegeCard from "./PackegeCard";
+
 import Image from "next/image";
+import PackageCard from "./PackegeCard";
 
 const plans = [
   {
@@ -53,9 +54,10 @@ const plans = [
   },
 ];
 
-const PackegesCard = () => {
+const PackagesCard = () => {
   return (
-    <div className="relative h-[800px]">
+    <div className="relative min-h-screen">
+      {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/assets/image/Cliend Feedback bg image.png"
@@ -65,13 +67,18 @@ const PackegesCard = () => {
           className="object-cover"
         />
       </div>
-      <div className="relative">
-        <h1 className="text-center font-bold text-3xl pt-10">
-          Make your Strong appearance In Social Media{" "}
+
+      {/* Content */}
+      <div className="relative z-10 py-20">
+        {/* Header */}
+        <h1 className="text-center font-bold text-2xl md:text-3xl lg:text-4xl px-5">
+          Make your Strong Appearance in Social Media
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-10 w-[80%] mx-auto">
+
+        {/* Package Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-5 md:p-10 w-[95%] md:w-[80%] mx-auto mt-8">
           {plans.map((plan) => (
-            <PackegeCard
+            <PackageCard
               key={plan.id}
               subHeader={plan.subHeader}
               mainHeader={plan.mainHeader}
@@ -85,4 +92,4 @@ const PackegesCard = () => {
   );
 };
 
-export default PackegesCard;
+export default PackagesCard;

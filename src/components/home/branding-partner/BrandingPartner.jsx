@@ -34,14 +34,14 @@ const BrandingPartner = () => {
         imageHeight={60}
         imageWidth={100}
         direction={"left"}
-        newClass={"mx-10"}
+        newClass={"lg:mx-10 mx-5"}
       />
       <LogoMarquee
         brandData={brandData}
         imageHeight={60}
         imageWidth={100}
         direction={"right"}
-        newClass={"mx-10"}
+        newClass={"lg:mx-10 mx-5"}
       />
     </div>
   );

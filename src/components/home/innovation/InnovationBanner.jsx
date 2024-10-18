@@ -3,30 +3,31 @@ import Button from "../../button/Button";
 
 const InnovationBanner = () => {
   return (
-    <div className="flex justify-center items-center gap-10 p-20 w-[80%] mx-auto">
-      <div className="w-3/5 flex flex-col text-black">
-        <h1 className="text-2xl font-bold py-2 text-yellow-400">
+    <div className="flex flex-col lg:flex-row justify-center items-center gap-10 p-10 lg:p-20 w-[90%] lg:w-[80%] mx-auto">
+      {/* Text Section */}
+      <div className="w-full lg:w-3/5 flex flex-col text-center lg:text-left text-black">
+        <h1 className="text-xl lg:text-2xl font-bold py-2 text-yellow-400">
           Innovation Starts Here
         </h1>
-        <p>
+        <p className="text-sm lg:text-base">
           Welcome to our Design & Development Company! We are a passionate team
-          of creative designers and Development experts who are dedicated to
+          of creative designers and development experts who are dedicated to
           crafting intuitive and impactful digital experiences for our clients.
         </p>
-        <div className="mt-10">
+        <div className="mt-6 lg:mt-10">
           <Button
-            children={"More About us"}
-            className={"px-10 py-2 rounded-2xl"}
+            children={"More About Us"}
+            className="px-6 lg:px-10 py-2 rounded-2xl"
           />
         </div>
       </div>
-      <div className="w-2/5">
-        <div className="flex w-[90%] mx-auto">
+
+      {/* Image Section */}
+      <div className="w-full lg:w-2/5 mt-6 lg:mt-0">
+        <div className="flex w-[80%] lg:w-[90%] mx-auto">
           <img
             src="/assets/image/image-8.png"
             alt="Feedback Background"
-            // layout="fill"
-            // objectFit="cover"
             width={500}
             height={500}
             className="z-0"

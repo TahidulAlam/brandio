@@ -15,9 +15,9 @@ const WorkImage = () => {
   ];
 
   return (
-    <div className="bg-black px-10 w-[80%] mx-auto">
+    <div className="bg-black px-4 md:px-10 w-[90%] lg:w-[80%] mx-auto">
       {/* Row 1: ID 1 and ID 2 */}
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <WorkCard
           id={1}
           title={projects[0].title}
@@ -31,7 +31,7 @@ const WorkImage = () => {
           title={projects[1].title}
           image={projects[1].image}
           ImageClass={``}
-          CardClass={"mt-20"}
+          CardClass={"md:mt-20"}
           alt={projects[1].title}
         />
       </div>
@@ -43,13 +43,13 @@ const WorkImage = () => {
           title={projects[2].title}
           image={projects[2].image}
           ImageClass={``}
-          CardClass={`mt-0 w-[85%]`}
+          CardClass={`mt-0 w-full md:w-[85%]`}
           alt={projects[2].title}
         />
       </div>
 
       {/* Row 3: ID 4 and ID 5 */}
-      <div className="mt-8 grid grid-cols-2 gap-8">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
         <WorkCard
           id={4}
           title={projects[3].title}
@@ -63,7 +63,7 @@ const WorkImage = () => {
           title={projects[4].title}
           image={projects[4].image}
           ImageClass={``}
-          CardClass={"mt-20"}
+          CardClass={"md:mt-20"}
           alt={projects[4].title}
         />
       </div>
@@ -75,13 +75,13 @@ const WorkImage = () => {
           title={projects[5].title}
           image={projects[5].image}
           ImageClass={``}
-          CardClass={"mt-0 w-[85%] ml-[15%]"}
+          CardClass={"mt-0 w-full md:w-[85%] md:ml-[15%]"}
           alt={projects[5].title}
         />
       </div>
 
       {/* Row 5: ID 7 and ID 8 */}
-      <div className="mt-8 grid grid-cols-2 gap-8">
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
         <WorkCard
           id={7}
           title={projects[6].title}
@@ -95,7 +95,7 @@ const WorkImage = () => {
           title={projects[7].title}
           image={projects[7].image}
           ImageClass={``}
-          CardClass={"mt-20"}
+          CardClass={"md:mt-20"}
           alt={projects[7].title}
         />
       </div>

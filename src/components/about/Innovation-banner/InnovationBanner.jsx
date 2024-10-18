@@ -4,25 +4,34 @@ import React from "react";
 
 const InnovationBanner = () => {
   return (
-    <div className="h-[600px] bg-gradient-to-bl from-yellow-400 via-yellow-100 via-30% to-white to-90%">
-      <div className="w-[90%] mx-auto pt-10">
-        <h1 className="text-6xl font-bold">Innovation</h1>
-        <h1 className="text-6xl font-bold mb-4 pl-28">Success Stories</h1>
+    <div className="h-auto lg:h-[600px] bg-gradient-to-bl from-yellow-400 via-yellow-100 via-30% to-white to-90%">
+      {/* Title Section */}
+      <div className="w-[90%] mx-auto pt-10 text-center lg:text-left">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold">
+          Innovation
+        </h1>
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-4 lg:pl-28">
+          Success Stories
+        </h1>
       </div>
 
-      <div className="grid grid-cols-2 gap-8 w-[80%] mx-auto">
-        <div className="float-right">
+      {/* Content Section: Image and Text */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-[90%] lg:w-[80%] mx-auto">
+        {/* Image Section */}
+        <div className="flex justify-center lg:justify-end">
           <Image
             src="/assets/image/image 6.png"
-            alt="Feedback Background"
-            width={450}
-            height={450}
-            // className="object-cover"
+            alt="Innovation Background"
+            width={350}
+            height={350}
+            className="object-cover"
           />
         </div>
-        <div>
-          <div className="mb-6">
-            <p className="leading-relaxed">
+
+        {/* Text and Counter Section */}
+        <div className="flex flex-col justify-center">
+          <div className="mb-6 text-center lg:text-left">
+            <p className="leading-relaxed text-sm sm:text-base lg:text-lg">
               Over the years, we've propelled numerous businesses to thrive,
               maintaining robust partnerships through our collaborative
               approach. We are proud to help businesses grow and succeed across
@@ -33,7 +42,7 @@ const InnovationBanner = () => {
           </div>
 
           {/* Counters */}
-          <div className="flex justify-between">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <Counter name="Projects Done" start={10} end={50} />
             <Counter name="Happy Clients" start={10} end={50} />
             <Counter name="Expert Team" start={10} end={50} />

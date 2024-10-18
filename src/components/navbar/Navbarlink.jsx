@@ -6,9 +6,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import BrandLogo from "./BrandLogo";
 import Button from "../button/Button";
+import { CiMenuFries } from "react-icons/ci"; // Mobile menu icon
+import { AiOutlineClose } from "react-icons/ai";
 
 const Navbarlink = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false); // State for mobile menu
   const pathname = usePathname();
 
   const handleClickNav = () => {
@@ -16,7 +19,6 @@ const Navbarlink = () => {
   };
 
   const navLinks = [
-    // { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
     { name: "About", path: "/about" },
     { name: "Packages", path: "/packages" },
@@ -24,15 +26,11 @@ const Navbarlink = () => {
     { name: "Contact", path: "/contact" },
   ];
 
-  const handleMouseEnter = () => {
-    setIsDropdownOpen(true);
+  const handleMobileDropdownToggle = (e) => {
+    e.preventDefault(); // Prevent default behavior to allow dropdown toggle
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
-  const handleMouseLeave = () => {
-    setIsDropdownOpen(false);
-  };
-
-  // Set the background and text color based on the current route
   const getBackgroundColor = () => {
     switch (pathname) {
       case "/":
@@ -50,43 +48,45 @@ const Navbarlink = () => {
 
   return (
     <div className={`${getBackgroundColor()}`}>
-      <div className="grid grid-cols-8 w-[90%] mx-auto py-10">
+      <div className="grid grid-cols-8 w-[90%] mx-auto lg:py-10 py-5">
+        {/* Logo Section */}
         <div className="z-50 col-span-2">
           <Link href={"/"}>
             <BrandLogo />
           </Link>
         </div>
-        <div className="col-span-4 w-full">
-          <div className="flex pt-3 items-center justify-around relative z-40">
+
+        {/* Navbar Links for Desktop */}
+        <div className="col-span-4 w-full lg:flex hidden justify-center">
+          <div className="flex items-center justify-center gap-14 relative pt-2 z-40">
             {navLinks.map((link) => (
-              <div
-                key={link.name}
-                className="relative"
-                onMouseEnter={
-                  link.name === "Packages" ? handleMouseEnter : undefined
-                }
-                onMouseLeave={
-                  link.name === "Packages" ? handleMouseLeave : undefined
-                }
-              >
+              <div key={link.name} className="relative">
                 <Link
                   href={link.path}
                   className={`${
                     pathname === link.path
-                      ? "font-bold" // Apply font-bold when active, but let parent determine text color
+                      ? "font-bold" // Apply font-bold when active
                       : "hover:text-blue"
                   } transition-colors duration-300 z-50`}
+                  onMouseEnter={
+                    link.name === "Services"
+                      ? () => setIsDropdownOpen(true)
+                      : undefined
+                  }
                 >
                   {link.name}
                 </Link>
 
-                {link.name === "Packages" && (
+                {/* Dropdown for Services */}
+                {link.name === "Services" && (
                   <div
-                    className={`fixed top-0 left-0 w-screen bg-black text-white shadow-lg transform transition-transform duration-500 h-[550px] ease-in-out -z-10 ${
+                    className={`fixed -top-5 left-0 w-screen bg-black text-white shadow-lg transform transition-transform duration-500 lg:h-[600px] h-[100%] ease-in-out z-30 ${
                       isDropdownOpen
                         ? "translate-y-0 opacity-100"
                         : "-translate-y-full opacity-0"
                     }`}
+                    onMouseEnter={() => setIsDropdownOpen(true)}
+                    onMouseLeave={() => setIsDropdownOpen(false)}
                   >
                     <DropDown />
                   </div>
@@ -95,17 +95,76 @@ const Navbarlink = () => {
             ))}
           </div>
         </div>
-        <div className="z-50 col-span-2">
-          <div className="flex justify-center items-center">
-            <Button
-              onClick={handleClickNav}
-              className="rounded-3xl font-semibold bg-yellow-400 px-5 py-2 text-lg text-black duration-300 active:scale-95"
-            >
-              Contact Us
-            </Button>
-          </div>
+        {/* Mobile Menu Icon */}
+        <div className="z-50 col-span-6 lg:hidden flex justify-end items-center">
+          {mobileSidebarOpen ? (
+            <AiOutlineClose
+              className="text-[2rem] text-white cursor-pointer transition-colors duration-300"
+              onClick={() => setMobileSidebarOpen(false)}
+            />
+          ) : (
+            <CiMenuFries
+              className="text-[2rem] text-white cursor-pointer transition-colors duration-300"
+              onClick={() => setMobileSidebarOpen(true)}
+            />
+          )}
+        </div>
+
+        {/* Button */}
+        <div className="z-50 col-span-2 hidden lg:flex justify-center items-center">
+          <Button
+            onClick={handleClickNav}
+            className="rounded-3xl font-semibold bg-yellow-400 px-5 py-2 text-lg text-black duration-300 active:scale-95"
+          >
+            Contact Us
+          </Button>
         </div>
       </div>
+
+      {/* Mobile Sidebar */}
+      <aside
+        className={`lg:hidden bg-black text-white p-2 text-center absolute top-[75px] right-0 w-full transition-all duration-500 h-screen ${
+          mobileSidebarOpen
+            ? "translate-x-0 opacity-100 z-20"
+            : "translate-x-[100%] opacity-0 z-[-1]"
+        }`}
+      >
+        <ul className="flex flex-col items-center gap-[20px] text-[1rem] text-gray-100">
+          {navLinks.map((link) => (
+            <div key={link.name}>
+              <Link
+                href={link.path}
+                onClick={
+                  link.name === "Services"
+                    ? handleMobileDropdownToggle
+                    : undefined
+                }
+              >
+                <li className="hover:text-primary transition-colors duration-300 capitalize">
+                  {link.name}
+                </li>
+              </Link>
+
+              {/* Dropdown for Mobile (Replace hover with click) */}
+              {link.name === "Services" && isDropdownOpen && (
+                <div className="w-ful text-white shadow-lg transition-transform duration-500 ease-in-out h-[600px]">
+                  <DropDown />
+                </div>
+              )}
+            </div>
+          ))}
+          <li className="w-full">
+            <div className="lg:hidden block ml-5 w-[80%] mx-auto">
+              <Button
+                onClick={handleClickNav}
+                className="rounded-2xl mx-2 font-semibold bg-yellow-400 px-3 py-1 text-sm text-black duration-300 active:scale-95 w-full"
+              >
+                Contact Us
+              </Button>
+            </div>
+          </li>
+        </ul>
+      </aside>
     </div>
   );
 };

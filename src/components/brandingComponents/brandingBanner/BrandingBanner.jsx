@@ -11,24 +11,29 @@ const BrandingBanner = ({
   onButtonClick,
 }) => {
   return (
-    <div className="h-[500px] w-[90%] mx-auto flex items-center justify-center">
-      <div className="w-2/3">
-        <h1 className="font-bold text-7xl text-white pt-20 pb-5">{heading}</h1>
-        <p className="text-white">{description}</p>
+    <div className="w-[90%] mx-auto flex flex-col lg:flex-row items-center justify-center h-auto lg:h-[500px] py-10">
+      {/* Text Section */}
+      <div className="w-full lg:w-2/3 text-center lg:text-left">
+        <h1 className="font-bold text-4xl lg:text-7xl text-white py-5">
+          {heading}
+        </h1>
+        <p className="text-white text-sm lg:text-base">{description}</p>
         <Button
           // onClick={onButtonClick}
-          className="mt-5 rounded-3xl font-semibold bg-yellow-400 px-8 py-3 text-lg text-black duration-300 active:scale-95"
+          className="mt-5 rounded-3xl font-semibold bg-yellow-400 px-8 py-3 text-sm lg:text-lg text-black duration-300 active:scale-95"
         >
           {buttonText}
         </Button>
       </div>
-      <div className="w-1/3">
+
+      {/* Image Section */}
+      <div className="w-full lg:w-1/3 mt-8 lg:mt-0 flex justify-center">
         <Image
           src={imageSrc}
           alt={imageAlt}
-          width={800}
-          height={800}
-          className="object-cover"
+          width={600}
+          height={600}
+          className="object-cover max-w-[80%] lg:max-w-none"
         />
       </div>
     </div>

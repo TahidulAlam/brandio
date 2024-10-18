@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="">
       <div className="bg-black w-full">
-        <div className="w-[90%] mx-auto">
+        <div className="lg:w-[90%] w-[95%] mx-auto">
           <HeroBanner />
         </div>
       </div>
@@ -26,7 +26,9 @@ export default function Home() {
       <div className="bg-black">
         <Services />
       </div>
-      <ClientFeedBack />
+      <div className="lg:mt-0 mt-10">
+        <ClientFeedBack />
+      </div>
       <div className="bg-black">
         <ExplorePlan />
       </div>

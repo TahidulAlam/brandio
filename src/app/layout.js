@@ -2,6 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
+import SmoothScrolling from "@/components/SmoothScrolling";
+import SmoothScroll from "@/components/SmoothScrolling";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,10 +28,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html className="scroll-smooth" lang="en">
       <body className={`${Sora.variable} antialiased`}>
         <Navbar />
-        <div>{children}</div>
+        {children}
+        {/* <SmoothScroll>{children}</SmoothScroll> */}
+        {/* <SmoothScrolling>{children}</SmoothScrolling> */}
+        {/* <div></div> */}
         <Footer />
       </body>
     </html>

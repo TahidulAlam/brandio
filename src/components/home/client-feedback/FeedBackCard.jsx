@@ -2,9 +2,9 @@ import React from "react";
 import Image from "next/image";
 const FeedBackCard = ({ image, name, review, designation }) => {
   return (
-    <div className="flex flex-col items-center justify-start bg-white p-10 rounded-xl gap-5">
+    <div className="flex flex-col items-center justify-start bg-white lg:p-10 p-2 rounded-xl gap-5">
       <div>
-        <p className="text-5xl font-bold text-red-600 font-sans text-start">
+        <p className="lg:text-5xl text-3xl font-bold text-red-600 font-sans text-start">
           "
         </p>
         <p className="text-sm text-start text-gray-600">{review}</p>

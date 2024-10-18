@@ -10,7 +10,7 @@ const reviews = [
   {
     id: 1,
     name: "John Doe",
-    designation: "Cheif Marketing Officer",
+    designation: "Chief Marketing Officer",
     review:
       "We were happy that we found the best UI/UX Design agency and best product design agency to work with. We will definitely continue to work with them as we have greatest output.",
     image: "/assets/image/Client Review.png",
@@ -18,7 +18,7 @@ const reviews = [
   {
     id: 2,
     name: "Jane Smith",
-    designation: "Cheif Marketing Officer",
+    designation: "Chief Marketing Officer",
     review:
       "We were happy that we found the best UI/UX Design agency and best product design agency to work with. We will definitely continue to work with them as we have greatest output.",
     image: "/assets/image/Client Review.png",
@@ -26,7 +26,7 @@ const reviews = [
   {
     id: 3,
     name: "Samuel Jones",
-    designation: "Cheif Marketing Officer",
+    designation: "Chief Marketing Officer",
     review:
       "We were happy that we found the best UI/UX Design agency and best product design agency to work with. We will definitely continue to work with them as we have greatest output.",
     image: "/assets/image/Client Review.png",
@@ -34,7 +34,7 @@ const reviews = [
   {
     id: 4,
     name: "Anna Williams",
-    designation: "Cheif Marketing Officer",
+    designation: "Chief Marketing Officer",
     review:
       "We were happy that we found the best UI/UX Design agency and best product design agency to work with. We will definitely continue to work with them as we have greatest output.",
     image: "/assets/image/Client Review.png",
@@ -42,7 +42,7 @@ const reviews = [
   {
     id: 5,
     name: "Michael Brown",
-    designation: "Cheif Marketing Officer",
+    designation: "Chief Marketing Officer",
     review:
       "We were happy that we found the best UI/UX Design agency and best product design agency to work with. We will definitely continue to work with them as we have greatest output.",
     image: "/assets/image/Client Review.png",
@@ -51,12 +51,25 @@ const reviews = [
 
 const ClientFeedBackSlider = () => (
   <Swiper
-    slidesPerView={3}
     spaceBetween={30}
     centeredSlides={true}
     // pagination={{ clickable: true }}
     modules={[Pagination]}
     className="mySwiper cursor-grab"
+    breakpoints={{
+      // Mobile
+      320: {
+        slidesPerView: 1,
+      },
+      // Tablet
+      768: {
+        slidesPerView: 2,
+      },
+      // Desktop
+      1024: {
+        slidesPerView: 3,
+      },
+    }}
   >
     {reviews.map(({ id, name, review, image, designation }) => (
       <SwiperSlide key={id}>

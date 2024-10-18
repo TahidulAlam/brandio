@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import { FaArrowUp, FaArrowDown } from "react-icons/fa"; // Icons can be passed as props or customized
+import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 
 const BrandingServiceList = ({
   servicesData,
@@ -63,8 +63,10 @@ const BrandingServiceList = ({
       )}
 
       {/* Content */}
-      <div className="relative z-10 w-1/2">
-        <h1 className="text-4xl md:text-5xl font-bold mb-5">{title}</h1>
+      <div className="relative z-10 w-full md:w-1/2 mx-auto">
+        <h1 className="text-3xl md:text-5xl font-bold mb-5 text-center md:text-left">
+          {title}
+        </h1>
 
         {servicesData.map((service, index) => (
           <div
@@ -101,7 +103,7 @@ const BrandingServiceList = ({
                 maxHeight: openCategories[index] ? contentHeight[index] : "0px",
               }}
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pl-4 py-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-4 pl-4">
                 {service.details.map((detail, idx) => (
                   <div
                     key={idx}

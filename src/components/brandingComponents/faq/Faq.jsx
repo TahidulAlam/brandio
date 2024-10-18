@@ -16,8 +16,12 @@ const Faq = ({
   };
 
   return (
-    <section className={`w-[50%] mx-auto py-16 ${sectionClassName}`}>
-      <h2 className="text-4xl font-extrabold mb-8">{title}</h2>
+    <section
+      className={`w-[90%] md:w-[70%] lg:w-[50%] mx-auto py-8 md:py-16 ${sectionClassName}`}
+    >
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-6 md:mb-8 text-center md:text-left">
+        {title}
+      </h2>
 
       {/* FAQ List */}
       <ul className="space-y-4">
@@ -29,7 +33,9 @@ const Faq = ({
           >
             {/* Question */}
             <div className="flex justify-between items-center">
-              <h3 className={`text-lg font-bold ${questionClassName}`}>
+              <h3
+                className={`text-base md:text-lg font-bold ${questionClassName}`}
+              >
                 {faq.question}
               </h3>
               {activeIndex === index ? (
@@ -43,11 +49,11 @@ const Faq = ({
             <div
               className={`transition-all duration-500 ease-in-out overflow-hidden ${answerClassName} ${
                 activeIndex === index
-                  ? "max-h-40 opacity-100 mt-4"
+                  ? "max-h-40 opacity-100 mt-2"
                   : "max-h-0 opacity-0"
               }`}
             >
-              <p className="text-gray-600">{faq.answer}</p>
+              <p className="text-gray-600 mt-2">{faq.answer}</p>
             </div>
           </li>
         ))}

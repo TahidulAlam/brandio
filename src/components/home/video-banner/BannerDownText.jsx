@@ -2,8 +2,8 @@ import React from "react";
 
 const BannerDownText = () => {
   return (
-    <div className="flex justify-center items-center p-10 w-[60%] mx-auto">
-      <h1 className="text-center">
+    <div className="lg:flex lg:justify-center lg:items-center lg:p-10 p-2 text-right lg:w-[60%] w-[95%] mx-auto">
+      <h1 className="lg:text-center text-start">
         Welcome to Brandio : Where Branding Dreams Soar! As your dedicated
         Branding & Development agency, we transforms user insights into dynamic
         strategies, collaborating with diverse industries and expertise.

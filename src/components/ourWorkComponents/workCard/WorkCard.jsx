@@ -7,7 +7,7 @@ const WorkCard = ({ id, title, image, alt, CardClass, ImageClass }) => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div className="w-[100%] mx-auto">
+    <div className="w-full mx-auto">
       <div className={`${CardClass} relative rounded-lg overflow-hidden`}>
         <img
           src={image}

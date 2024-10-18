@@ -71,11 +71,16 @@ const Allservice = () => {
   };
 
   return (
-    <div className="w-full max-w-[80%] -mt-20 pt-36 mx-auto flex rounded-lg bg-[#000000] p-3 *:mix-blend-difference">
-      <div className="w-1/2">
-        <h1 className="text-white font-bold text-3xl">Our Services</h1>
+    <div className="w-full max-w-[90%] xl:max-w-[80%] -mt-20 pt-36 mx-auto flex flex-col lg:flex-row rounded-lg bg-[#000000] p-6">
+      {/* Left Side - Header */}
+      <div className="w-full lg:w-1/2 mb-6 lg:mb-0">
+        <h1 className="text-white font-bold text-3xl lg:text-4xl">
+          Our Services
+        </h1>
       </div>
-      <div className="w-1/2">
+
+      {/* Right Side - Services List */}
+      <div className="w-full lg:w-1/2 space-y-4">
         {dataArr.map((PerAccordion, idx) => (
           <AllServiceCard
             key={idx}

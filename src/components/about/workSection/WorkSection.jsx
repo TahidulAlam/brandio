@@ -45,14 +45,16 @@ const WorkSection = () => {
   };
 
   return (
-    <div className="w-full text-white bg-[#101010] p-20 h-auto">
+    <div className="w-full text-white bg-[#101010] p-10 lg:p-20 h-auto">
       <div className="w-[90%] mx-auto mt-10">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col lg:flex-row justify-between items-center">
           {/* Left Section */}
-          <div className="flex flex-col w-1/2 space-y-5">
+          <div className="flex flex-col lg:w-1/2 space-y-5 mb-10 lg:mb-0">
             <div>
-              <h1 className="text-4xl font-bold mb-4">How We Work</h1>
-              <p className="text-lg text-slate-400">
+              <h1 className="text-3xl lg:text-4xl font-bold mb-4">
+                How We Work
+              </h1>
+              <p className="text-base lg:text-lg text-slate-400">
                 Our process is simple. We start with your needs, create engaging
                 experiences, research, experiment with ideas, and use your
                 feedback to guide us.
@@ -62,7 +64,7 @@ const WorkSection = () => {
               {imageData.map((item) => (
                 <button
                   key={item.name}
-                  className={`font-semibold text-2xl transition-colors hover:text-white text-start border border-b-2 border-r-0 border-l-0 border-t-0 w-80 pb-2 ${
+                  className={`font-semibold text-lg lg:text-2xl transition-colors hover:text-white text-start border border-b-2 border-r-0 border-l-0 border-t-0 w-full lg:w-80 pb-2 ${
                     selectedItem.name === item.name
                       ? "text-white"
                       : "text-slate-400"
@@ -76,9 +78,9 @@ const WorkSection = () => {
           </div>
 
           {/* Right Section - Image and Description */}
-          <div className="w-1/2 flex flex-col">
+          <div className="lg:w-1/2 flex flex-col items-center lg:items-end">
             {/* Top Part of Name */}
-            <h2 className="text-4xl font-semibold -mb-4 text-start z-10 text-yellow-400">
+            <h2 className="text-3xl lg:text-4xl font-semibold -mb-4 text-start z-10 text-yellow-400">
               {splitName(selectedItem.name).firstPart}
             </h2>
 
@@ -88,16 +90,16 @@ const WorkSection = () => {
               alt="Selected Work Process"
               width={500}
               height={400}
-              className="object-cover rounded-md mb-4"
+              className="object-cover rounded-md mb-4 w-full max-w-xs lg:max-w-md"
             />
 
             {/* Bottom Part of Name */}
-            <h2 className="text-4xl -mt-10 font-semibold text-end z-10 text-yellow-400 mr-24">
+            <h2 className="text-3xl lg:text-4xl -mt-10 font-semibold text-end z-10 text-yellow-400 mr-0 lg:mr-24">
               {splitName(selectedItem.name).secondPart}
             </h2>
 
             {/* Description */}
-            <p className="text-lg mt-4 text-center h-28 text-slate-400">
+            <p className="text-base lg:text-lg mt-4 text-center h-auto lg:h-28 text-slate-400">
               {selectedItem.description}
             </p>
           </div>

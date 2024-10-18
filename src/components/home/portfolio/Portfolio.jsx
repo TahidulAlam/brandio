@@ -12,13 +12,18 @@ const imageData = [
 
 const Portfolio = () => {
   return (
-    <div className="p-20">
-      <div className="flex justify-center items-center p-10">
-        <h1 className="text-2xl font-bold text-white">Portfolio at a Glance</h1>
+    <div className="p-10 lg:p-20">
+      {/* Title Section */}
+      <div className="flex justify-center items-center p-5 lg:p-10">
+        <h1 className="text-xl lg:text-2xl font-bold text-white">
+          Portfolio at a Glance
+        </h1>
       </div>
-      <div className="grid grid-cols-3 w-[70%] mx-auto">
+
+      {/* Image Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full lg:w-[70%] mx-auto">
         {imageData.map((image) => (
-          <div key={image.id} className="relative w-full h-80">
+          <div key={image.id} className="relative w-full h-60 lg:h-80">
             <img
               src={image.src}
               alt={image.alt}
@@ -27,8 +32,13 @@ const Portfolio = () => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center items-center p-10">
-        <Button children={"show more"} className={"rounded-2xl px-6 py-2"} />
+
+      {/* Button Section */}
+      <div className="flex justify-center items-center p-5 lg:p-10">
+        <Button
+          children={"Show More"}
+          className={"rounded-2xl px-4 lg:px-6 py-2"}
+        />
       </div>
     </div>
   );
