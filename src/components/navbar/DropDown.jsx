@@ -8,37 +8,37 @@
 //     {
 //       link: "/packages/branding",
 //       name: "Branding",
-//       image: "/assets/image/service/1.png",
+//       image: "/public/assets/image/service/1.png",
 //     },
 //     {
 //       link: "/packages/uiux",
 //       name: "UI/UX Design",
-//       image: "/assets/image/service/2.png",
+//       image: "/public/assets/image/service/2.png",
 //     },
 //     {
 //       link: "/packages/webdesign",
 //       name: "Web Design",
-//       image: "/assets/image/service/3.png",
+//       image: "/public/assets/image/service/3.png",
 //     },
 //     {
 //       link: "/packages/mobileapp",
 //       name: "Mobile App",
-//       image: "/assets/image/service/4.png",
+//       image: "/public/assets/image/service/4.png",
 //     },
 //     {
 //       link: "/packages/monthlydesign",
 //       name: "Monthly Design",
-//       image: "/assets/image/service/5.png",
+//       image: "/public/assets/image/service/5.png",
 //     },
 //     {
 //       link: "/packages/digitalmarketing",
 //       name: "Digital Marketing",
-//       image: "/assets/image/service/6.png",
+//       image: "/public/assets/image/service/6.png",
 //     },
 //     {
 //       link: "/packages/cmswebsite",
 //       name: "CMS Website",
-//       image: "/assets/image/service/7.png",
+//       image: "/public/assets/image/service/7.png",
 //     },
 //   ];
 
@@ -94,45 +94,45 @@ import Link from "next/link"; // Import Link from Next.js
 const DropDown = () => {
   const imageData = [
     {
-      link: "/packages/branding",
+      link: "/services/branding",
       name: "Branding",
-      image: "/assets/image/service/1.png",
+      image: "/public/assets/image/service/1.png",
     },
     {
-      link: "/packages/uiux",
+      link: "/services/uiux",
       name: "UI/UX Design",
-      image: "/assets/image/service/2.png",
+      image: "/public/assets/image/service/2.png",
     },
     {
-      link: "/packages/webdesign",
+      link: "/services/webdesign",
       name: "Web Design",
-      image: "/assets/image/service/3.png",
+      image: "/public/assets/image/service/3.png",
     },
     {
-      link: "/packages/mobileapp",
+      link: "/services/mobileapp",
       name: "Mobile App",
-      image: "/assets/image/service/4.png",
+      image: "/public/assets/image/service/4.png",
     },
     {
-      link: "/packages/monthlydesign",
+      link: "/services/monthlydesign",
       name: "Monthly Design",
-      image: "/assets/image/service/5.png",
+      image: "/public/assets/image/service/5.png",
     },
     {
-      link: "/packages/digitalmarketing",
+      link: "/services/digitalmarketing",
       name: "Digital Marketing",
-      image: "/assets/image/service/6.png",
+      image: "/public/assets/image/service/6.png",
     },
     {
-      link: "/packages/cmswebsite",
+      link: "/services/cmswebsite",
       name: "CMS Website",
-      image: "/assets/image/service/7.png",
+      image: "/public/assets/image/service/7.png",
     },
   ];
 
   const [selectedImage, setSelectedImage] = useState(imageData[0].image);
 
-  const handleImageClick = (image) => {
+  const handleImageHover = (image) => {
     setSelectedImage(image);
   };
 
@@ -157,7 +157,7 @@ const DropDown = () => {
             {imageData.map((item) => (
               <Link href={item.link} key={item.name}>
                 <span
-                  onClick={() => handleImageClick(item.image)}
+                  onMouseEnter={() => handleImageHover(item.image)} // Change image on hover
                   className="font-semibold text-lg lg:text-2xl transition-colors hover:text-yellow-500 cursor-pointer"
                 >
                   {item.name}
