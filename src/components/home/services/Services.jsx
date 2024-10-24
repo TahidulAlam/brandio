@@ -8,19 +8,19 @@ export default function Services() {
   const dataArr = [
     {
       title: "Branding",
-      image: "/assets/image/service/1.png",
+      image: "/assets/image/Service/1.png",
       description:
         "Effective branding isn't just about logos and colors. it's about creating a lasting impression that distinguishes your business. At Musemind, we craft unique brand identities that resonate with your audience, enhancing recognition and trust.",
     },
     {
       title: "UI/UX Design",
-      image: "/assets/image/service/1.png",
+      image: "/assets/image/Service/1.png",
       description:
         "Exceptional UX isn't just design; it's a journey that builds trust, forges loyalty, and makes your brand unforgettable and this is our commitment to you from our UX design agency.",
     },
     {
       title: "Web Design & Development",
-      image: "/assets/image/service/1.png",
+      image: "/assets/image/Service/1.png",
       description:
         "Yes, you can change your shipping address before your order is shipped. Go to your account settings and update the shipping information accordingly.",
     },
