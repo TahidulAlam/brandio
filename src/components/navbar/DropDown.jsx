@@ -96,37 +96,37 @@ const DropDown = () => {
     {
       link: "/services/branding",
       name: "Branding",
-      image: "/assets/image/service/1.png",
+      image: "/assets/image/Service/1.png",
     },
     {
       link: "/services/uiux",
       name: "UI/UX Design",
-      image: "/assets/image/service/2.png",
+      image: "/assets/image/Service/2.png",
     },
     {
       link: "/services/webdesign",
       name: "Web Design",
-      image: "/assets/image/service/3.png",
+      image: "/assets/image/Service/3.png",
     },
     {
       link: "/services/mobileapp",
       name: "Mobile App",
-      image: "/assets/image/service/4.png",
+      image: "/assets/image/Service/4.png",
     },
     {
       link: "/services/monthlydesign",
       name: "Monthly Design",
-      image: "/assets/image/service/5.png",
+      image: "/assets/image/Service/5.png",
     },
     {
       link: "/services/digitalmarketing",
       name: "Digital Marketing",
-      image: "/assets/image/service/6.png",
+      image: "/assets/image/Service/6.png",
     },
     {
       link: "/services/cmswebsite",
       name: "CMS Website",
-      image: "/assets/image/service/7.png",
+      image: "/assets/image/Service/7.png",
     },
   ];
 
