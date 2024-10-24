@@ -18,15 +18,18 @@ export default function Home() {
           <HeroBanner />
         </div>
       </div>
-      <Container>
+      <div className="lg:mt-10 mt-4">
         <BrandingPartner />
-      </Container>
-      <VideoBanner />
-      {/* <VideoBan /> */}
+      </div>
+      {/* <Container>
+      </Container> */}
+      <div>
+        <VideoBanner />
+      </div>
       <div className="bg-black">
         <Services />
       </div>
-      <div className="lg:mt-0 mt-10">
+      <div className="">
         <ClientFeedBack />
       </div>
       <div className="bg-black">

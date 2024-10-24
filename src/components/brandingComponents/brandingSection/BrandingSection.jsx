@@ -17,7 +17,7 @@ const BrandingSection = ({
     >
       {/* Image Column */}
       <div className={`w-full h-full ${reverse ? "lg:order-2" : "lg:order-1"}`}>
-        <div className="flex justify-center items-center">
+        <div className={`flex justify-center  items-center`}>
           <img
             src={image}
             alt={title}

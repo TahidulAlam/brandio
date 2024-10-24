@@ -17,7 +17,7 @@ const LogoMarquee = ({
           alt="Selected"
           width={imageWidth}
           height={imageHeight}
-          className={`${newClass} object-cover`}
+          className={`${newClass} object-cover overflow-hidden`}
           layout="fixed"
         />
       ))}

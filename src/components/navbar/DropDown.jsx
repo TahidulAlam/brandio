@@ -8,37 +8,37 @@
 //     {
 //       link: "/packages/branding",
 //       name: "Branding",
-//       image: "/public/assets/image/service/1.png",
+//       image: "/assets/image/service/1.png",
 //     },
 //     {
 //       link: "/packages/uiux",
 //       name: "UI/UX Design",
-//       image: "/public/assets/image/service/2.png",
+//       image: "/assets/image/service/2.png",
 //     },
 //     {
 //       link: "/packages/webdesign",
 //       name: "Web Design",
-//       image: "/public/assets/image/service/3.png",
+//       image: "/assets/image/service/3.png",
 //     },
 //     {
 //       link: "/packages/mobileapp",
 //       name: "Mobile App",
-//       image: "/public/assets/image/service/4.png",
+//       image: "/assets/image/service/4.png",
 //     },
 //     {
 //       link: "/packages/monthlydesign",
 //       name: "Monthly Design",
-//       image: "/public/assets/image/service/5.png",
+//       image: "/assets/image/service/5.png",
 //     },
 //     {
 //       link: "/packages/digitalmarketing",
 //       name: "Digital Marketing",
-//       image: "/public/assets/image/service/6.png",
+//       image: "/assets/image/service/6.png",
 //     },
 //     {
 //       link: "/packages/cmswebsite",
 //       name: "CMS Website",
-//       image: "/public/assets/image/service/7.png",
+//       image: "/assets/image/service/7.png",
 //     },
 //   ];
 
@@ -96,37 +96,37 @@ const DropDown = () => {
     {
       link: "/services/branding",
       name: "Branding",
-      image: "/public/assets/image/service/1.png",
+      image: "/assets/image/service/1.png",
     },
     {
       link: "/services/uiux",
       name: "UI/UX Design",
-      image: "/public/assets/image/service/2.png",
+      image: "/assets/image/service/2.png",
     },
     {
       link: "/services/webdesign",
       name: "Web Design",
-      image: "/public/assets/image/service/3.png",
+      image: "/assets/image/service/3.png",
     },
     {
       link: "/services/mobileapp",
       name: "Mobile App",
-      image: "/public/assets/image/service/4.png",
+      image: "/assets/image/service/4.png",
     },
     {
       link: "/services/monthlydesign",
       name: "Monthly Design",
-      image: "/public/assets/image/service/5.png",
+      image: "/assets/image/service/5.png",
     },
     {
       link: "/services/digitalmarketing",
       name: "Digital Marketing",
-      image: "/public/assets/image/service/6.png",
+      image: "/assets/image/service/6.png",
     },
     {
       link: "/services/cmswebsite",
       name: "CMS Website",
-      image: "/public/assets/image/service/7.png",
+      image: "/assets/image/service/7.png",
     },
   ];
 
@@ -138,21 +138,19 @@ const DropDown = () => {
 
   return (
     <div className="w-full text-white p-4 lg:p-20 max-h-[100%] lg:h-[560px]">
-      <div className="w-[90%] mx-auto mt-5 lg:mt-10">
+      <div className="w-[70%] mx-auto mt-5 lg:mt-10">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
-          {/* Image Display Section - Show only on larger screens */}
-          <div className="hidden lg:block mr-4 lg:mr-10">
+          <div className="hidden lg:block mr-4 lg:mr-10 mt-28">
             <Image
               src={selectedImage}
               alt="Selected"
               width={500}
               height={400}
               className="object-cover"
-              priority // Ensures fast loading of the image
+              priority
             />
           </div>
 
-          {/* Service List Section - Align items properly for both mobile and desktop */}
           <div className="flex flex-col items-center lg:items-end gap-4 lg:gap-5 w-full lg:w-auto">
             {imageData.map((item) => (
               <Link href={item.link} key={item.name}>

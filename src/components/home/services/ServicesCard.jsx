@@ -84,7 +84,7 @@ const ServicesCard = ({
         <div className="overflow-hidden lg:w-96 w-80 lg:pr-4 pr-0 lg:text-sm text-xs lg:px-5 px-0 -mr-5">
           {description}
         </div>
-        <div>
+        <div className="lg:ml-5 ml-0">
           <Button
             children={"Learn More"}
             className="lg:mt-5 mt-1 rounded-3xl font-semibold bg-yellow-400 lg:px-4 px-3 py-1 lg:py-2 lg:text-base text-sm text-black duration-300 active:scale-95"

@@ -1,24 +1,37 @@
 "use client";
 import { useState, useEffect } from "react";
 
+// A custom hook to track window size efficiently with resize event debouncing
 export default function useWindowSize() {
-  const getSize = () => {
-    return {
-      width: window.innerWidth,
-      height: window.innerHeight,
-    };
-  };
-
-  const [windowSize, setWindowSize] = useState(getSize);
+  const [windowSize, setWindowSize] = useState({
+    width: typeof window !== "undefined" ? window.innerWidth : 0,
+    height: typeof window !== "undefined" ? window.innerHeight : 0,
+  });
 
   useEffect(() => {
+    // Function to update window size
     const handleResize = () => {
-      setWindowSize(getSize());
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
     };
 
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    // Debouncing resize event to improve performance
+    const debouncedResize = debounce(handleResize, 100);
+
+    window.addEventListener("resize", debouncedResize);
+    return () => window.removeEventListener("resize", debouncedResize);
   }, []);
 
   return windowSize;
+}
+
+// Helper function for debouncing
+function debounce(func, wait) {
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
 }

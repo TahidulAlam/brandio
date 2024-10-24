@@ -22,27 +22,29 @@ const BrandingPartner = () => {
   ];
   return (
     <div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center w-[90%] mx-auto">
         <h1 className="font-bold text-3xl">100+ Branding Partner</h1>
-        <h1>
+        <h1 className="text-center">
           Brands are the cultural connection between companies and their
           communities.
         </h1>
       </div>
-      <LogoMarquee
-        brandData={brandData}
-        imageHeight={60}
-        imageWidth={100}
-        direction={"left"}
-        newClass={"lg:mx-10 mx-5"}
-      />
-      <LogoMarquee
-        brandData={brandData}
-        imageHeight={60}
-        imageWidth={100}
-        direction={"right"}
-        newClass={"lg:mx-10 mx-5"}
-      />
+      <div className="my-10">
+        <LogoMarquee
+          brandData={brandData}
+          imageHeight={50}
+          imageWidth={80}
+          direction={"left"}
+          newClass={"lg:mx-10 mx-5"}
+        />
+        <LogoMarquee
+          brandData={brandData}
+          imageHeight={50}
+          imageWidth={80}
+          direction={"right"}
+          newClass={"lg:mx-10 mx-5"}
+        />
+      </div>
     </div>
   );
 };

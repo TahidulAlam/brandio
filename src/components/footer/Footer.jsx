@@ -5,7 +5,7 @@ import Button from "../button/Button";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1B1714] text-white pt-10 pb-5">
+    <footer className="bg-[#000000] text-white pt-10 pb-5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* First Column: Logo, Description, and Contact Button */}

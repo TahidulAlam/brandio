@@ -16,7 +16,7 @@ const InqueryForm = () => {
 
   return (
     <div className="max-w-xl space-y-6 rounded-3xl border bg-white p-10">
-      <form className="space-y-6">
+      <form className="space-y-9">
         <div className="space-y-2 text-sm">
           <label
             className="text-sm font-bold leading-none text-black"
@@ -25,14 +25,13 @@ const InqueryForm = () => {
             Full Name
           </label>
           <input
-            className="flex h-10 w-full border border-b-2 border-t-0 border-l-0 border-r-0 border-b-black px-3 py-2 focus-visible:outline-none"
+            className="flex h-10 w-full border border-b-2 border-t-0 border-l-0 border-r-0 border-b-black  border-opacity-90 px-3 py-2 focus-visible:outline-none"
             id="full_name"
             placeholder="Enter your full name"
             name="full_name"
             type="text"
           />
         </div>
-
         <div className="grid grid-cols-2 gap-4">
           <div className="space-y-2 text-sm">
             <label

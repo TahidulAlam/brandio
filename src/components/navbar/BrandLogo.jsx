@@ -1,10 +1,9 @@
 import React from "react";
 import Image from "next/image";
-
 function BrandLogo() {
   return (
     <Image
-      src="/assets/image/logo.png" // Path relative to the public folder
+      src="/assets/image/Logo.png" // Path relative to the public folder
       alt="Picture of the author"
       width={100}
       height={90}

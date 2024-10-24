@@ -38,7 +38,7 @@ const WhyChooseSection = ({
       </div>
 
       {/* Right side: Image */}
-      <div className="md:w-1/2">
+      <div className="md:w-1/2 flex items-center justify-center">
         <Image
           src={imageUrl}
           alt={altText}

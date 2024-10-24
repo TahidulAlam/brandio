@@ -9,8 +9,11 @@ const about = () => {
   return (
     <div>
       <div className="w-[90%] mx-auto">
-        <h1 className="font-bold text-6xl">Fueling Minds</h1>
-        <h1 className="font-bold text-6xl"> - Inspiring Designs..</h1>
+        <h1 className="font-bold lg:text-6xl text-3xl">Fueling Minds</h1>
+        <h1 className="font-bold lg:text-6xl text-3xl">
+          {" "}
+          - Inspiring Designs..
+        </h1>
       </div>
       <div>
         <AboutBanner />

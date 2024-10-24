@@ -159,7 +159,7 @@ const branding = () => {
           //   onButtonClick={handleButtonClick}
         />
       </div>
-      <div>
+      <div className="w-[90%] mx-auto">
         <BrandingSection
           image="/assets/image/image 8.png"
           title="Digital Product Design & Consulting Services"
