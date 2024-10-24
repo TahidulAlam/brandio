@@ -6,25 +6,25 @@ const WorkSection = () => {
   const imageData = [
     {
       name: "Discovery & Research",
-      image: "/assets/image/service/1.png",
+      image: "/assets/image/Service/1.png",
       description:
         "We begin by understanding your business, industry, and target audience. We conduct thorough research to build a solid foundation for your brand.",
     },
     {
       name: "Brand Strategy",
-      image: "/assets/image/service/2.png",
+      image: "/assets/image/Service/2.png",
       description:
         "We create a strategic plan that defines the goals, values, and message of your brand to set the stage for the visual identity.",
     },
     {
       name: "Visual Identity Creation",
-      image: "/assets/image/service/3.png",
+      image: "/assets/image/Service/3.png",
       description:
         "Our designers craft a unique and memorable visual identity that reflects your brand’s core values and resonates with your audience.",
     },
     {
       name: "Implementation & Launch",
-      image: "/assets/image/service/4.png",
+      image: "/assets/image/Service/4.png",
       description:
         "We ensure a smooth implementation of the brand across all platforms and successfully launch it to the world.",
     },
