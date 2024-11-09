@@ -49,7 +49,7 @@ const TailoredBrandDesign = () => {
   ];
 
   return (
-    <section className="w-[90%] mx-auto py-16 flex flex-col md:flex-row gap-8 text-white">
+    <section className="py-16 flex flex-col md:flex-row gap-8 text-white">
       {/* Left side: Text content */}
       <div className="md:w-1/2">
         <h2 className="text-4xl font-extrabold mb-6">

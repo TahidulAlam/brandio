@@ -1,49 +1,67 @@
 import React from "react";
 import LogoMarquee from "./LogoMarquee";
 
-const BrandingPartner = () => {
-  const brandData = [
-    { image: "/assets/image/Branding Partner/1.png" },
-    { image: "/assets/image/Branding Partner/2.png" },
-    { image: "/assets/image/Branding Partner/3.png" },
-    { image: "/assets/image/Branding Partner/4.png" },
-    { image: "/assets/image/Branding Partner/5.png" },
-    { image: "/assets/image/Branding Partner/6.png" },
-    { image: "/assets/image/Branding Partner/7.png" },
-    { image: "/assets/image/Branding Partner/8.png" },
-    { image: "/assets/image/Branding Partner/9.png" },
-    { image: "/assets/image/Branding Partner/10.png" },
-    { image: "/assets/image/Branding Partner/11.png" },
-    { image: "/assets/image/Branding Partner/12.png" },
-    { image: "/assets/image/Branding Partner/13.png" },
-    { image: "/assets/image/Branding Partner/14.png" },
-    { image: "/assets/image/Branding Partner/15.png" },
-    { image: "/assets/image/Branding Partner/16.png" },
+const BrandingPartner = ({ mainTitle, subtitle }) => {
+  const brandDatas1 = [
+    { image: "/assets/image/Branding Partner/image s1 (1).webp" },
+    { image: "/assets/image/Branding Partner/image s1 (1).png" },
+    { image: "/assets/image/Branding Partner/image s1 (2).png" },
+    { image: "/assets/image/Branding Partner/image s1 (3).png" },
+    { image: "/assets/image/Branding Partner/image s1 (4).png" },
+    { image: "/assets/image/Branding Partner/image s1 (5).png" },
+    { image: "/assets/image/Branding Partner/image s1 (6).png" },
+    { image: "/assets/image/Branding Partner/image s1 (7).png" },
+    { image: "/assets/image/Branding Partner/image s1 (8).png" },
+    { image: "/assets/image/Branding Partner/image s1 (9).png" },
+    { image: "/assets/image/Branding Partner/image s1 (10).png" },
+    { image: "/assets/image/Branding Partner/image s1 (11).png" },
+    { image: "/assets/image/Branding Partner/image s1 (12).png" },
+    { image: "/assets/image/Branding Partner/image s1 (13).png" },
+    { image: "/assets/image/Branding Partner/image s1 (14).png" },
+    { image: "/assets/image/Branding Partner/image s1 (15).png" },
+  ];
+  const brandDatas2 = [
+    { image: "/assets/image/Branding Partner/image s2 (1).webp" },
+    { image: "/assets/image/Branding Partner/image s2 (1).png" },
+    { image: "/assets/image/Branding Partner/image s2 (2).png" },
+    { image: "/assets/image/Branding Partner/image s2 (2).webp" },
+    { image: "/assets/image/Branding Partner/image s2 (3).png" },
+    { image: "/assets/image/Branding Partner/image s2 (4).png" },
+    { image: "/assets/image/Branding Partner/image s2 (5).png" },
+    { image: "/assets/image/Branding Partner/image s2 (6).png" },
+    { image: "/assets/image/Branding Partner/image s2 (7).png" },
+    { image: "/assets/image/Branding Partner/image s2 (8).png" },
+    { image: "/assets/image/Branding Partner/image s2 (9).png" },
+    { image: "/assets/image/Branding Partner/image s2 (10).png" },
+    { image: "/assets/image/Branding Partner/image s2 (11).png" },
   ];
   return (
     <div>
-      <div className="flex flex-col justify-center items-center w-[90%] mx-auto">
-        <h1 className="font-bold text-3xl">100+ Branding Partner</h1>
-        <h1 className="text-center">
-          Brands are the cultural connection between companies and their
-          communities.
-        </h1>
+      <div className="flex flex-col justify-center items-center w-[90%] mx-auto mt-10 ">
+        <h1 className="font-bold text-3xl">{mainTitle}</h1>
+        <h1 className="text-center">{subtitle}</h1>
       </div>
-      <div className="my-10">
-        <LogoMarquee
-          brandData={brandData}
-          imageHeight={50}
-          imageWidth={80}
-          direction={"left"}
-          newClass={"lg:mx-10 mx-5"}
-        />
-        <LogoMarquee
-          brandData={brandData}
-          imageHeight={50}
-          imageWidth={80}
-          direction={"right"}
-          newClass={"lg:mx-10 mx-5"}
-        />
+      <div className="my-10 flex flex-col gap-5">
+        <div>
+          <LogoMarquee
+            brandData={brandDatas1}
+            imageHeight={50}
+            imageWidth={80}
+            direction={"left"}
+            layout={"fixed"}
+            newClass={"lg:mx-10 mx-5"}
+          />
+        </div>
+        <div>
+          <LogoMarquee
+            brandData={brandDatas2}
+            imageHeight={50}
+            imageWidth={80}
+            direction={"right"}
+            layout={"fixed"}
+            newClass={"lg:mx-10 mx-5"}
+          />
+        </div>
       </div>
     </div>
   );

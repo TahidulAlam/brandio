@@ -2,35 +2,40 @@ import AboutBanner from "@/components/about/about-banner/AboutBanner";
 import InnovationBanner from "@/components/about/Innovation-banner/InnovationBanner";
 import PortfolioBanner from "@/components/about/portfolio-banner/PortfolioBanner";
 import WorkSection from "@/components/about/workSection/WorkSection";
+import Container from "@/components/container/Container";
 import InquryBanner from "@/components/home/inquery-banner/InquryBanner";
 import React from "react";
 
 const about = () => {
   return (
-    <div>
-      <div className="w-[90%] mx-auto">
-        <h1 className="font-bold lg:text-6xl text-3xl">Fueling Minds</h1>
-        <h1 className="font-bold lg:text-6xl text-3xl">
-          {" "}
-          - Inspiring Designs..
-        </h1>
-      </div>
-      <div>
+    <>
+      <Container>
+        <div>
+          <h1 className="font-[1000] lg:text-8xl text-4xl lg:py-5 py-1">
+            Fueling Minds
+          </h1>
+          <h1 className="font-[1000] lg:text-8xl text-4xl lg:py-5 py-1">
+            {" "}
+            - <span className="text-slate-500">Inspiring Designs..</span>
+          </h1>
+        </div>
+      </Container>
+      <div className="">
         <AboutBanner />
       </div>
-      <div>
+      <div className="">
         <PortfolioBanner />
       </div>
-      <div>
+      <div className="">
         <InnovationBanner />
       </div>
-      <div>
+      <div className="">
         <WorkSection />
       </div>
-      <div>
+      <div className="">
         <InquryBanner />
       </div>
-    </div>
+    </>
   );
 };
 

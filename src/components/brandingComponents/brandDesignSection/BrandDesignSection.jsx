@@ -1,5 +1,6 @@
 import React from "react";
 import InfoBox from "./InfoBox";
+import TextWithLineBreaks from "@/components/TextWithLineBreaks";
 
 const BrandDesignSection = ({
   sectionTitle,
@@ -18,17 +19,17 @@ const BrandDesignSection = ({
       }}
     >
       {/* Content of the section */}
-      <div className="relative z-10 w-[90%] mx-auto">
+      <div className="relative z-10 mx-auto max-w-[90%] lg:max-w-[80%] ">
         {/* Section Heading */}
         {sectionTitle && (
-          <header className="text-start mb-12">
-            <h2 className="text-5xl font-extrabold text-black leading-snug">
-              {sectionTitle}
-            </h2>
+          <header className="lg:text-start text-center lg:mb-12 mb-5">
+            <div className="lg:text-5xl text-xl font-extrabold text-black leading-snug">
+              <TextWithLineBreaks text={sectionTitle} />
+            </div>
             {sectionSubtitle && (
-              <p className="text-lg font-medium text-gray-600 mt-4">
-                {sectionSubtitle}
-              </p>
+              <div className="text-lg font-medium text-gray-600 mt-4">
+                <TextWithLineBreaks text={sectionSubtitle} />
+              </div>
             )}
           </header>
         )}

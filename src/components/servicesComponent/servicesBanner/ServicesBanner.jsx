@@ -3,18 +3,25 @@ import React from "react";
 
 const ServicesBanner = () => {
   return (
-    <div className="h-auto w-[90%] mx-auto text-center md:text-left pb-5">
+    <div className="h-auto lg:w-[82%] w-[90%] mx-auto text-center md:text-left lg:pb-28 pb-5">
       {/* Title */}
-      <h1 className="font-bold text-4xl md:text-5xl lg:text-7xl text-white pt-10 md:pt-20 pb-5 leading-snug">
-        Digital Product Design & <br /> Consulting Services
-      </h1>
+      <div className="flex flex-col pt-10 md:pt-20 pb-5 gap-5">
+        <h1 className="font-bold text-4xl md:text-5xl lg:text-7xl text-white leading-snug">
+          Digital Product Design &
+        </h1>
+        <h1 className="font-bold text-4xl md:text-5xl lg:text-7xl text-white leading-snug">
+          {" "}
+          Consulting Services
+        </h1>
+      </div>
 
       {/* Description */}
       <p className="text-white text-base md:text-lg lg:text-xl leading-relaxed mb-5">
         Our Global digital product design agency helps brands make top-quality
-        Branding, MVP, Software, Mobile apps, and Websites. We focus on
-        user-friendly designs that look great and work smoothly. Let us help
-        your business grow with our expert digital product solutions.
+        Branding, <br /> MVP, Software, Mobile apps, and Websites. We focus on
+        user-friendly designs that <br /> look great and work smoothly. Let us
+        help your business grow with our expert <br /> digital product
+        solutions.
       </p>
 
       {/* Button */}

@@ -8,6 +8,7 @@ import TailoredBrandDesign from "@/components/brandingComponents/tailoredBrandDe
 import WhyChooseSection from "@/components/brandingComponents/whyChooseBrandio/WhyChooseBrandio";
 
 import BrandingServiceList from "@/components/brandingServiceList/BrandingServiceList";
+import Container from "@/components/container/Container";
 import ClientFeedBack from "@/components/home/client-feedback/ClientFeedBack";
 import InquryBanner from "@/components/home/inquery-banner/InquryBanner";
 
@@ -148,21 +149,25 @@ const branding = () => {
   ];
   return (
     <div>
-      <div className="bg-black">
-        <BrandingBanner
-          heading="Digital Product Design & Consulting Services"
-          description="Our Global digital product design agency helps brands to make top-quality Branding, MVP, Software, Mobile apps, and Websites. We focus on user-friendly designs that look great and work smoothly. Let us help your business grow with our expert digital product solutions."
-          bgClass={"bg-white"}
-          buttonText="Design my Product Now"
-          imageSrc="/assets/image/image 7.png"
-          imageAlt="Feedback Background"
-          //   onButtonClick={handleButtonClick}
-        />
+      <div>
+        <Container bgClassName="bg-black">
+          <BrandingBanner
+            heading="Brand Design & Consulting Services"
+            description="Your brand's design speaks before you do. 80% of consumers recognize a brand just by its design & color! We use color psychology to design your brand to be memorable."
+            bgClass={"bg-white"}
+            buttonText="Design my Product Now"
+            imageSrc="/assets/image/dsprsd.png"
+            imageAlt="Feedback Background"
+            // h2Class="w-2/3"
+            // pClass="w-1/3"
+            //   onButtonClick={handleButtonClick}
+          />
+        </Container>
       </div>
-      <div className="w-[90%] mx-auto">
+      {/* <div className="lg:w-[83%] w-[90%] mx-auto">
         <BrandingSection
           image="/assets/image/image 8.png"
-          title="Digital Product Design & Consulting Services"
+          title="Design Speaks Louder Than Words"
           description={`Your brand's design speaks before you do. 80% of 
           consumers recognize a brand just by its design & color!
           We use color psychology to design your brand to be
@@ -171,11 +176,30 @@ const branding = () => {
           //   reverse={true}
           buttonText=" Design my Product Now"
         />
-      </div>
-      <div>
+      </div> */}
+      <Container bgClassName="bg-white">
+        <BrandingSection
+          image="/assets/image/image 8.png"
+          title="Design Speaks Louder Than Words"
+          description={`Your brand's design speaks before you do. 80% of 
+          consumers recognize a brand just by its design & color!
+          We use color psychology to design your brand to be
+          memorable.`}
+          // bgClass={"bg-black"}
+          //   reverse={true}
+          buttonText=" Design my Product Now"
+        />
+      </Container>
+      {/* <div className="bg-black">
+        <div className="lg:w-[83%] w-[90%] mx-auto">
+          <BrandingSectionTow />
+        </div>
+      </div> */}
+      <Container bgClassName={"bg-black"}>
         <BrandingSectionTow />
-      </div>
-      <div className="w-[90%] mx-auto">
+      </Container>
+
+      {/* <div className="lg:w-[83%] w-[90%] mx-auto">
         <BrandingSection
           image="/assets/image/image 8.png"
           title="Brand Design Services"
@@ -187,9 +211,24 @@ memorable to customers.`}
           reverse={true}
           buttonText="Create your Brand Identity"
         />
-      </div>
+      </div> */}
+      <Container>
+        <BrandingSection
+          image="/assets/image/image 8.png"
+          title="Brand Design Services"
+          description={`Brand design services help create your brand's visual identity.
+These services include Naming, Research, designing logos,
+choosing colors and fonts, and creating graphics representing 
+your brand. This helps make your brand recognizable and 
+memorable to customers.`}
+          reverse={true}
+          buttonText="Create your Brand Identity"
+        />
+      </Container>
       <div>
-        <CaseStudySection />
+        <Container bgClassName="bg-black">
+          <CaseStudySection />
+        </Container>
       </div>
       <div>
         <BrandDesignSection
@@ -200,41 +239,48 @@ memorable to customers.`}
         />
       </div>
       <div>
-        <BrandingServiceList
-          servicesData={servicesData}
-          title="Range of Brand Design Services We Offer"
-          backgroundImage="/assets/image/object1.png"
-          backgroundPosition="right"
-          textColor="text-white"
-          highlightColor="text-yellow-500"
-          iconColor="bg-yellow-500 text-black"
-        />
+        <Container bgClassName="bg-black">
+          <BrandingServiceList
+            servicesData={servicesData}
+            title="Range of Brand Design/n Services We Offer"
+            backgroundImage="/assets/image/object1.png"
+            backgroundPosition="right"
+            textColor="text-white"
+            highlightColor="text-yellow-500"
+            iconColor="bg-yellow-500 text-black"
+          />
+        </Container>
       </div>
       <div>
-        <WhyChooseSection
-          heading="Let’s Ditch the Generic! Why Choose Brandio?"
-          description="At Brandio, we take a detail-oriented approach, conducting in-depth research and analysis to understand your industry, target audience, and competitors, ensuring that your brand stands out in a crowded market."
-          features={featuresList}
-          buttonText="Get Started with Brandio"
-          imageUrl="/assets/image/image09.png"
-          altText="Brandio Sample Design"
-          // onButtonClick={() => alert("Button clicked!")}
-        />
+        <Container>
+          <WhyChooseSection
+            heading="Let’s Ditch the Generic!/n Why Choose Brandio?"
+            description="At Brandio, we take a detail-oriented approach, conducting in-depth research and analysis to understand your industry, target audience, and competitors, ensuring that your brand stands out in a crowded market."
+            features={featuresList}
+            buttonText="Get Started with Brandio"
+            imageUrl="/assets/image/image09.png"
+            altText="Brandio Sample Design"
+            // onButtonClick={() => alert("Button clicked!")}
+          />
+        </Container>
       </div>
-      <div className="bg-black">
+      <Container bgClassName="bg-black">
         <TailoredBrandDesign />
-      </div>
+      </Container>
+
       <div>
         <ClientFeedBack />
       </div>
       <div>
-        <Faq
-          faqs={faqsData}
-          title="FAQs about our Brand design services"
-          sectionClassName="text-black"
-          questionClassName="text-blue-600" // Optional customization
-          answerClassName="transition-all" // Optional customization
-        />
+        <Container bgClassName="bg-white">
+          <Faq
+            faqs={faqsData}
+            title="FAQs about our Brand design services"
+            sectionClassName="text-black"
+            questionClassName="text-black" // Optional customization
+            answerClassName="transition-all" // Optional customization
+          />
+        </Container>
       </div>
       <div>
         <InquryBanner />

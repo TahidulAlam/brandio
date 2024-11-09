@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
+import TextWithLineBreaks from "../TextWithLineBreaks";
 
 const BrandingServiceList = ({
   servicesData,
@@ -46,42 +47,29 @@ const BrandingServiceList = ({
   }, [openCategories]);
 
   return (
-    <section className={`relative bg-black ${textColor} py-16 px-6 md:px-20`}>
+    <section className={` bg-black ${textColor} grid grid-cols-6 py-10 pb-24 `}>
       {/* Background Image */}
-      {backgroundImage && (
-        <div
-          className={`absolute ${backgroundPosition}-[200px] ${backgroundTop} opacity-70 hidden md:block z-0`}
-        >
-          <Image
-            src={backgroundImage}
-            alt="Background Image"
-            width={600}
-            height={600}
-            className="object-contain"
-          />
-        </div>
-      )}
 
       {/* Content */}
-      <div className="relative z-10 w-full md:w-1/2 mx-auto">
-        <h1 className="text-3xl md:text-5xl font-bold mb-5 text-center md:text-left">
-          {title}
-        </h1>
+      <div className="relative z-10 lg:col-span-3 col-span-6 ">
+        <div className="text-3xl md:text-5xl font-bold lg:mb-5 mb-0 text-center md:text-left lg:py-10 py-5 text-nowrap">
+          <TextWithLineBreaks text={title} />
+        </div>
 
         {servicesData.map((service, index) => (
           <div
             key={index}
-            className="mb-2 border border-b-2 border-white border-x-0 border-t-0"
+            className="mb-2 border border-b-2 border-gray-400 border-x-0 border-t-0 group"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => handleMouseLeave(index)}
           >
             {/* Category Header */}
             <div
-              className={`flex justify-between items-center cursor-pointer py-4 transition-all duration-300 ease-in-out hover:${highlightColor}`}
+              className={`flex justify-between items-center cursor-pointer py-5 transition-all duration-300 ease-in-out  hover:${highlightColor}`}
               role="button"
               aria-expanded={openCategories[index] ? "true" : "false"}
             >
-              <h2 className="text-2xl md:text-3xl font-medium">
+              <h2 className="text-2xl md:text-3xl font-medium text-gray-400 group-hover:text-white">
                 {service.category}
               </h2>
               {openCategories[index] ? (
@@ -103,11 +91,11 @@ const BrandingServiceList = ({
                 maxHeight: openCategories[index] ? contentHeight[index] : "0px",
               }}
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-4 pl-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 py-5 pl-4">
                 {service.details.map((detail, idx) => (
                   <div
                     key={idx}
-                    className={`flex items-center space-x-3 text-lg text-gray-300 hover:text-white transition-colors duration-300`}
+                    className={`flex items-center space-x-3 text-lg text-gray-400 transition-colors duration-300`}
                   >
                     <FaArrowUp className={`${highlightColor} rotate-45`} />
                     <span className="text-sm">{detail}</span>
@@ -117,6 +105,17 @@ const BrandingServiceList = ({
             </div>
           </div>
         ))}
+      </div>
+      <div className={` opacity-70 hidden md:block col-span-3 z-0`}>
+        <div className="flex justify-center items-center h-full">
+          <Image
+            src={backgroundImage}
+            alt="Background Image"
+            width={600}
+            height={600}
+            className="object-contain"
+          />
+        </div>
       </div>
     </section>
   );

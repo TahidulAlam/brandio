@@ -21,14 +21,14 @@ const ServicesCard = ({
 
   return (
     <div
-      className="border-b border-gray-500/50 lg:py-10 py-2 last-of-type:border-b-0 group"
+      className="border-b border-gray-500/50 lg:py-10 py-2 mb-10 lg:mb-0 last-of-type:border-b-0 group"
       onMouseEnter={() => handleMouseEnter(idx)}
       onMouseLeave={handleMouseLeave}
       style={{ height: "auto", minHeight: "50px" }} // Ensure stable height for the container
     >
       <div className="flex h-full w-full items-center justify-between font-medium text-white">
         {/* Left section containing the number and title */}
-        <div className="flex gap-5 items-center">
+        <div className="flex lg:gap-10 gap-5 items-center">
           {/* Number */}
           <h1
             className="text-yellow-400 transition-colors duration-500 ease-in-out group-hover:text-orange-400"
@@ -43,7 +43,7 @@ const ServicesCard = ({
 
           {/* Title */}
           <span
-            className="lg:text-5xl text-xl font-bold text-gray-400 transition-colors duration-500 ease-in-out group-hover:text-white"
+            className="lg:text-5xl text-3xl text-nowrap overflow-hidden font-bold text-gray-400 transition-colors duration-500 ease-in-out group-hover:text-white"
             style={{
               // lineHeight: "1.2",
               // fontSize: "3rem",
@@ -75,19 +75,19 @@ const ServicesCard = ({
 
       {/* Description and button */}
       <div
-        className={`grid w-96 lg:ml-8 ml-0 overflow-hidden text-white transition-all duration-500 ease-in-out ${
+        className={`grid lg:w-2/4 w-96 lg:ml-14 ml-0 overflow-hidden text-white transition-all duration-500 ease-in-out ${
           isOpen === idx
             ? "grid-rows-[1fr] pb-1 pt-3 opacity-100"
             : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="overflow-hidden lg:w-96 w-80 lg:pr-4 pr-0 lg:text-sm text-xs lg:px-5 px-0 -mr-5">
+        <div className="overflow-hidden lg:w-full w-80 lg:pr-4 pr-0 lg:text-lg text-zinc-200 font-light text-xs lg:px-5 px-0 lg:-mr-5 ml-12 lg:m-0">
           {description}
         </div>
-        <div className="lg:ml-5 ml-0">
+        <div className="lg:ml-4 ml-12 lg:mt-0 mt-3">
           <Button
             children={"Learn More"}
-            className="lg:mt-5 mt-1 rounded-3xl font-semibold bg-yellow-400 lg:px-4 px-3 py-1 lg:py-2 lg:text-base text-sm text-black duration-300 active:scale-95"
+            className="lg:mt-5 mt-1 rounded-3xl font-semibold bg-yellow-400 lg:px-4 px-5 py-3 lg:py-2 lg:text-base text-[12px] text-black duration-300 active:scale-95"
           />
         </div>
       </div>

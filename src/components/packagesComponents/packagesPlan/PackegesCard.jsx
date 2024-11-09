@@ -71,12 +71,12 @@ const PackagesCard = () => {
       {/* Content */}
       <div className="relative z-10 py-20">
         {/* Header */}
-        <h1 className="text-center font-bold text-2xl md:text-3xl lg:text-4xl px-5">
+        <h1 className="text-center font-bold text-2xl md:text-xl lg:text-2xl px-5">
           Make your Strong Appearance in Social Media
         </h1>
 
         {/* Package Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-5 md:p-10 w-[95%] md:w-[80%] mx-auto mt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-5 md:p-10 w-[95%] md:w-[80%] mx-auto mt-8">
           {plans.map((plan) => (
             <PackageCard
               key={plan.id}

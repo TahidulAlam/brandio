@@ -8,18 +8,22 @@ const LogoMarquee = ({
   imageHeight,
   imageWidth,
   newClass,
+  layout,
 }) => {
   return (
     <Marquee direction={direction}>
-      {brandData.map((item) => (
-        <Image
-          src={item.image}
-          alt="Selected"
-          width={imageWidth}
-          height={imageHeight}
-          className={`${newClass} object-cover overflow-hidden`}
-          layout="fixed"
-        />
+      {brandData.map((item, index) => (
+        <div key={index} className={`${newClass}`}>
+          <Image
+            src={item.image}
+            alt="Brand Logo"
+            width={imageWidth}
+            height={imageHeight}
+            className="object-fill overflow-hidden"
+            // layout="fixed"
+            layout={layout}
+          />
+        </div>
       ))}
     </Marquee>
   );

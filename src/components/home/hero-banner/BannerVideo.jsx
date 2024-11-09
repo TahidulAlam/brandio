@@ -7,7 +7,7 @@ const BannerVideo = () => {
         autoPlay
         loop
         muted
-        className="absolute w-[600px] h-[500px] object-cover"
+        className="absolute w-[750px] h-[600px] object-cover"
         // controls
         preload="none"
       >

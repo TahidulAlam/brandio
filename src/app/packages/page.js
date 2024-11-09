@@ -6,7 +6,7 @@ import PackagesBanner from "@/components/packagesComponents/packagesBanner/Packa
 import PackegesCard from "@/components/packagesComponents/packagesPlan/PackegesCard";
 import React from "react";
 
-const Page = () => {
+const packages = () => {
   return (
     <div>
       {/* Top section with default stacking context */}
@@ -34,4 +34,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default packages;

@@ -72,7 +72,7 @@ export default function VideoBanner() {
       </div>
 
       {/* Banner down text */}
-      <div className="mt-5">
+      <div className="mt-5 mb-20 lg:mb-0">
         <BannerDownText />
       </div>
     </div>

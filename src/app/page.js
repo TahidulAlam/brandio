@@ -12,21 +12,22 @@ import InquryBanner from "@/components/home/inquery-banner/InquryBanner";
 
 export default function Home() {
   return (
-    <div className="">
-      <div className="bg-black w-full">
-        <div className="lg:w-[90%] w-[95%] mx-auto">
-          <HeroBanner />
-        </div>
+    <>
+      <Container bgClassName="bg-black">
+        <HeroBanner />
+      </Container>
+      <div className="lg:mt-20 mt-4 lg:mb-20 mb-0">
+        <BrandingPartner
+          mainTitle={"100+ Branding Partner"}
+          subtitle={
+            "Brands are the cultural connection between companies and their communities."
+          }
+        />
       </div>
-      <div className="lg:mt-10 mt-4">
-        <BrandingPartner />
-      </div>
-      {/* <Container>
-      </Container> */}
-      <div>
+      <div className="mb-2 lg:mb-0">
         <VideoBanner />
       </div>
-      <div className="bg-black">
+      <div className="bg-black lg:pt-3 pt-5">
         <Services />
       </div>
       <div className="">
@@ -44,6 +45,6 @@ export default function Home() {
       <div>
         <InquryBanner />
       </div>
-    </div>
+    </>
   );
 }

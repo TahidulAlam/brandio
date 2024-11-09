@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const InquryBanner = () => {
   return (
-    <div className="relative h-[750px] lg:h-[600px]">
+    <div className="relative h-[950px] lg:h-[670px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -21,12 +21,12 @@ const InquryBanner = () => {
         {/* Text Section */}
         <div className="w-full lg:w-1/2 flex justify-center items-center text-center lg:text-left">
           <h2 className="text-3xl lg:text-5xl font-bold text-black mb-6 mt-10">
-            Have a Project <br /> Idea?
+            Have a Project Idea?
           </h2>
         </div>
 
         {/* Form Section */}
-        <div className="w-full lg:w-1/2 h-full mt-8 lg:mt-0">
+        <div className="w-full lg:w-1/2 h-full mt-8 lg:mt-14">
           <InqueryForm />
         </div>
       </div>

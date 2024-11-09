@@ -34,10 +34,10 @@ const Portfolio = () => {
       </div>
 
       {/* Button Section */}
-      <div className="flex justify-center items-center p-5 lg:p-10">
+      <div className="flex justify-center items-center p-5 lg:p-10 mt-2 lg:mt-0">
         <Button
           children={"Show More"}
-          className={"rounded-2xl px-4 lg:px-6 py-2"}
+          // className={"rounded-2xl px-4 lg:px-6 py-2"}
         />
       </div>
     </div>

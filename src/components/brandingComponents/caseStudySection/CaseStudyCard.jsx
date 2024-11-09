@@ -3,15 +3,15 @@ import React from "react";
 
 const CaseStudyCard = ({ image, title, description, buttonLabel }) => {
   return (
-    <div className="bg-zinc-900 text-white p-6 flex flex-col">
+    <div className="bg-zinc-900 text-white p-6 flex flex-col justify-between pb-12">
       {/* Image */}
       <img
         src={image}
         alt={title}
-        className="w-full h-full object-cover mb-6"
+        className="w-full lg:h-[500px] h-full object-cover mb-6"
       />
       {/* Title */}
-      <h3 className="text-xl font-bold mb-4">{title}</h3>
+      <h3 className="text-3xl w-4/5 font-bold mb-4 text-wrap">{title}</h3>
       {/* Description */}
       <p className="text-gray-400 mb-6">{description}</p>
       {/* Button */}

@@ -1,4 +1,5 @@
 import Button from "@/components/button/Button";
+import TextWithLineBreaks from "@/components/TextWithLineBreaks";
 import Image from "next/image";
 import React from "react";
 
@@ -10,30 +11,35 @@ const BrandingBanner = ({
   imageAlt,
   onButtonClick,
 }) => {
+  // console.log(description);
   return (
-    <div className="w-[90%] mx-auto flex flex-col lg:flex-row items-center justify-center h-auto lg:h-[500px] py-10">
+    <div className="flex flex-col lg:flex-row justify-center items-center h-[500px]">
       {/* Text Section */}
-      <div className="w-full lg:w-2/3 text-center lg:text-left">
-        <h1 className="font-bold text-4xl lg:text-7xl text-white py-5">
-          {heading}
+      <div className="w-full lg:w-2/4 text-center lg:text-left  flex flex-col lg:justify-start justify-center items-center lg:items-start gap-8 lg:-mt-16 mt-0">
+        <h1 className="font-bold text-2xl lg:text-5xl text-white">
+          <TextWithLineBreaks text={heading} />
         </h1>
-        <p className="text-white text-sm lg:text-base">{description}</p>
-        <Button
+        <div className="text-slate-200 text-sm lg:text-base whitespace-pre-line">
+          <TextWithLineBreaks text={description} />
+        </div>
+        <div>
+          <Button
           // onClick={onButtonClick}
-          className="mt-5 rounded-3xl font-semibold bg-yellow-400 px-8 py-3 text-sm lg:text-lg text-black duration-300 active:scale-95"
-        >
-          {buttonText}
-        </Button>
+          // className="mt-5 rounded-3xl font-semibold bg-yellow-400 px-8 py-3 text-sm lg:text-lg text-black duration-300 active:scale-95"
+          >
+            {buttonText}
+          </Button>
+        </div>
       </div>
 
       {/* Image Section */}
-      <div className="w-full lg:w-1/3 mt-8 lg:mt-0 flex justify-center">
+      <div className="w-full lg:w-2/4 mt-10 lg:mt-0 flex justify-center overflow-hidden">
         <Image
           src={imageSrc}
           alt={imageAlt}
-          width={600}
-          height={600}
-          className="object-cover max-w-[80%] lg:max-w-none"
+          width={500}
+          height={500}
+          className="object-cover lg:block hidden overflow-hidden"
         />
       </div>
     </div>

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaArrowDown, FaArrowUp } from "react-icons/fa";
+import { FaCircleArrowDown, FaCircleArrowUp } from "react-icons/fa6";
 
 const Faq = ({
   faqs,
@@ -17,18 +17,18 @@ const Faq = ({
 
   return (
     <section
-      className={`w-[90%] md:w-[70%] lg:w-[50%] mx-auto py-8 md:py-16 ${sectionClassName}`}
+      className={`w-[90%] md:w-[70%] lg:w-[45%] mx-auto py-8 lg:py-20 ${sectionClassName}`}
     >
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-6 md:mb-8 text-center md:text-left">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-6 md:mb-8 text-center text-black">
         {title}
       </h2>
 
       {/* FAQ List */}
-      <ul className="space-y-4">
+      <ul className="space-y-5">
         {faqs.map((faq, index) => (
           <li
             key={index}
-            className="border-b border-gray-300 p-4 cursor-pointer"
+            className="border-b border-gray-300 p-4 cursor-pointer pb-8"
             onClick={() => toggleFaq(index)}
           >
             {/* Question */}
@@ -39,9 +39,9 @@ const Faq = ({
                 {faq.question}
               </h3>
               {activeIndex === index ? (
-                <FaArrowUp className="w-5 h-5 text-gray-600" />
+                <FaCircleArrowDown className="w-7 h-7 bg-slate-200 rounded-full text-black" />
               ) : (
-                <FaArrowDown className="w-5 h-5 text-gray-600" />
+                <FaCircleArrowUp className="w-7 h-7 rounded-full text-gray-400" />
               )}
             </div>
 

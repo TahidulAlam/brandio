@@ -1,6 +1,12 @@
 import React from "react";
 
-const Container = ({ children }) => {
-  return <div className="w-[90%] mx-auto mt-10">{children}</div>;
+const Container = ({ children, bgClassName = "", className = "" }) => {
+  return (
+    <div className={bgClassName}>
+      <div className={`mx-auto max-w-[90%] lg:max-w-[80%] ${className}`}>
+        {children}
+      </div>
+    </div>
+  );
 };
 export default Container;

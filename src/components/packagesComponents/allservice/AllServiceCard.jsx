@@ -1,6 +1,6 @@
 import Button from "@/components/button/Button";
 import { useEffect, useState } from "react";
-import { FaArrowCircleDown } from "react-icons/fa";
+import { FaCircleArrowDown } from "react-icons/fa6";
 const AllServiceCard = ({
   idx,
   title,
@@ -25,22 +25,24 @@ const AllServiceCard = ({
       onMouseLeave={handleMouseLeave}
       style={{ height: "auto", minHeight: "60px" }} // Ensure stable height for the container
     >
-      <div className="flex w-full items-center justify-between font-medium text-white">
+      <div className="flex w-full items-center justify-between lg:pt-10 font-medium text-white">
         {/* Left section containing the number and title */}
         <div
-          className="text-2xl font-bold text-gray-400 transition-colors duration-500 ease-in-out group-hover:text-white"
-          style={{
-            //   lineHeight: ".5",
-            fontSize: "2rem",
-            transition: "color 0.5s ease",
-          }}
+          className="lg:text-5xl text-3xl text-nowrap font-bold text-gray-400 transition-colors duration-500 ease-in-out group-hover:text-white"
+          style={
+            {
+              //   lineHeight: ".5",
+              // fontSize: "2rem",
+              // transition: "color 0.5s ease",
+            }
+          }
         >
           {title}
         </div>
 
         {/* Right section containing the image */}
         <div className="relative">
-          <FaArrowCircleDown className="group-hover:text-yellow-300 text-4xl text-slate-700" />
+          <FaCircleArrowDown className="group-hover:text-yellow-300 lg:text-4xl text-2xl text-[#322D2A]" />
         </div>
       </div>
 

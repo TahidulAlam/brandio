@@ -99,32 +99,32 @@ const DropDown = () => {
       image: "/assets/image/Service/1.png",
     },
     {
-      link: "/services/uiux",
+      link: "/services/uiUx",
       name: "UI/UX Design",
       image: "/assets/image/Service/2.png",
     },
     {
-      link: "/services/webdesign",
-      name: "Web Design",
+      link: "/services/webDesign",
+      name: "Web Design & Development",
       image: "/assets/image/Service/3.png",
     },
     {
-      link: "/services/mobileapp",
+      link: "/services/mobileApp",
       name: "Mobile App",
       image: "/assets/image/Service/4.png",
     },
     {
-      link: "/services/monthlydesign",
+      link: "/services/monthlyDesign",
       name: "Monthly Design",
       image: "/assets/image/Service/5.png",
     },
     {
-      link: "/services/digitalmarketing",
+      link: "/services/digitalMarketing",
       name: "Digital Marketing",
       image: "/assets/image/Service/6.png",
     },
     {
-      link: "/services/cmswebsite",
+      link: "/services/cmsWebsite",
       name: "CMS Website",
       image: "/assets/image/Service/7.png",
     },
@@ -137,8 +137,8 @@ const DropDown = () => {
   };
 
   return (
-    <div className="w-full text-white p-4 lg:p-20 max-h-[100%] lg:h-[560px]">
-      <div className="w-[70%] mx-auto mt-5 lg:mt-10">
+    <div className="w-full text-white p-4 lg:p-20 max-h-[100%] lg:h-[700px]">
+      <div className="w-[70%] mx-auto mt-5 lg:mt-20">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
           <div className="hidden lg:block mr-4 lg:mr-10 mt-28">
             <Image

@@ -371,7 +371,7 @@ const Navbarlink = () => {
     { name: "About", path: "/about" },
     { name: "Packages", path: "/packages" },
     { name: "Our Work", path: "/ourwork" },
-    { name: "Contact", path: "/contact" },
+    { name: "Blog", path: "/blog" },
   ];
 
   const getBackgroundColor = () => {
@@ -391,16 +391,16 @@ const Navbarlink = () => {
 
   return (
     <div className={`${getBackgroundColor()}`}>
-      <div className="grid grid-cols-8 w-[90%] mx-auto lg:py-6 lg:pt-10 pt-5">
+      <div className="grid grid-cols-8 lg:py-6 lg:pt-6 pt-3 mx-auto max-w-[90%] lg:max-w-[80%]">
         {/* Logo Section */}
-        <div className="z-50 col-span-2">
+        <div className="z-50 col-span-2 mt-3">
           <Link href={"/"}>
             <BrandLogo />
           </Link>
         </div>
 
         {/* Navbar Links for Desktop */}
-        <div className="col-span-4 w-full lg:flex hidden justify-center">
+        <div className="col-span-4 w-full lg:flex hidden justify-center ">
           <div className="flex items-center justify-center gap-10 relative z-40 text-sm">
             {navLinks.map((link) => (
               <div key={link.name} className="relative">
@@ -424,7 +424,7 @@ const Navbarlink = () => {
 
                 {link.name === "Services" && (
                   <div
-                    className={`fixed -top-5 -z-10 left-0 w-screen bg-black text-white shadow-lg transform transition-transform duration-500 lg:h-[600px] h-[100%] ease-in-out ${
+                    className={`fixed -top-5 -z-10 left-0 w-screen bg-black text-white shadow-lg transform transition-transform duration-500 lg:h-[700px] h-[100%] ease-in-out ${
                       isDropdownOpen
                         ? "translate-y-0 opacity-100"
                         : "-translate-y-full opacity-0"
@@ -474,7 +474,7 @@ const Navbarlink = () => {
             : "-translate-y-full opacity-0 z-[-1]"
         }`}
       >
-        <ul className="flex flex-col items-center gap-[20px] text-xs text-gray-100 mt-16">
+        <ul className="flex flex-col items-start gap-[20px] text-xs text-gray-100 mt-20">
           {navLinks.map((link) => (
             <div key={link.name}>
               <Link
@@ -488,7 +488,7 @@ const Navbarlink = () => {
                     : () => setMobileSidebarOpen(false)
                 }
               >
-                <li className="hover:text-primary text-xs transition-colors duration-300 capitalize">
+                <li className="hover:text-primary text-lg transition-colors duration-300 capitalize pl-5">
                   {link.name}
                 </li>
               </Link>
@@ -502,10 +502,10 @@ const Navbarlink = () => {
             </div>
           ))}
           <li className="w-full">
-            <div className="lg:hidden block ml-5 w-[80%] mx-auto">
+            <div className="lg:hidden block mt-5 ml-5 lg:w-[80%] lg:mx-auto float-start">
               <Button
                 onClick={handleClickNav}
-                className="rounded-2xl mx-2 font-semibold bg-yellow-400 px-3 py-1 text-sm text-black duration-300 active:scale-95 w-full"
+                className="rounded-2xl mx-2 font-semibold bg-yellow-400 px-3 py-2 text-sm text-black duration-300 active:scale-95 w-full"
               >
                 Contact Us
               </Button>

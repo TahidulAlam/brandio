@@ -17,7 +17,7 @@ const BrandingComponent = () => {
         "Social Media Banner",
         "3D Product Packaging",
       ],
-      image: "/assets/image/service image/1 (1).png",
+      image: "/assets/image/service image/1 (7).png",
       cta: {
         text: "Learn More",
         link: "/branding",
@@ -36,7 +36,7 @@ const BrandingComponent = () => {
         "Wireframe",
         "UI Prototyping",
       ],
-      image: "/assets/image/service image/1 (2).png",
+      image: "/assets/image/service image/1 (6).png",
       cta: {
         text: "Learn More",
         link: "/branding",
@@ -76,7 +76,7 @@ const BrandingComponent = () => {
         "Social Media Banner",
         "3D Product Packaging",
       ],
-      image: "/assets/image/service image/1 (1).png",
+      image: "/assets/image/service image/1 (5).png",
       cta: {
         text: "Learn More",
         link: "/branding",
@@ -96,7 +96,7 @@ const BrandingComponent = () => {
         "Social Media Banner",
         "3D Product Packaging",
       ],
-      image: "/assets/image/service image/1 (1).png",
+      image: "/assets/image/service image/1 (2).png",
       cta: {
         text: "Learn More",
         link: "/branding",
@@ -116,7 +116,7 @@ const BrandingComponent = () => {
         "Social Media Banner",
         "3D Product Packaging",
       ],
-      image: "/assets/image/service image/1 (1).png",
+      image: "/assets/image/service image/1 (3).png",
       cta: {
         text: "Learn More",
         link: "/branding",
@@ -136,7 +136,7 @@ const BrandingComponent = () => {
         "Social Media Banner",
         "3D Product Packaging",
       ],
-      image: "/assets/image/service image/1 (1).png",
+      image: "/assets/image/service image/1 (4).png",
       cta: {
         text: "Learn More",
         link: "/branding",
@@ -145,17 +145,17 @@ const BrandingComponent = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4">
+    <div className="container lg:w-[85%] w-[90%] mx-auto px-4">
       {services.map((service, index) => (
         <BrandingCardComponent
           key={service.id}
           id={service.id}
           title={service.title}
           description={service.description}
-          services={service.services} // Passing services array
+          services={service.services}
           image={service.image}
           link={service.cta.link}
-          reverseLayout={index % 2 !== 0} // Alternating layout
+          reverseLayout={index % 2 !== 0}
         />
       ))}
     </div>

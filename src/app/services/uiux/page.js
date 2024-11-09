@@ -4,23 +4,22 @@ import BrandingSection from "@/components/brandingComponents/brandingSection/Bra
 import DesignSection from "@/components/brandingComponents/designSection/DesignSection";
 import Faq from "@/components/brandingComponents/faq/Faq";
 import BrandingServiceList from "@/components/brandingServiceList/BrandingServiceList";
+import Container from "@/components/container/Container";
 import InquryBanner from "@/components/home/inquery-banner/InquryBanner";
 import React from "react";
 
 const uiux = () => {
-  const brandData = [
-    { image: "/assets/image/work image/work (1).png" },
-    { image: "/assets/image/work image/work (2).png" },
-    { image: "/assets/image/work image/work (3).png" },
-    { image: "/assets/image/work image/work (4).png" },
-    { image: "/assets/image/work image/work (5).png" },
-    { image: "/assets/image/work image/work (6).png" },
-    { image: "/assets/image/work image/work (7).png" },
-    { image: "/assets/image/work image/work (8).png" },
-    { image: "/assets/image/work image/work (9).png" },
-    { image: "/assets/image/work image/work (9).png" },
-    { image: "/assets/image/work image/work (10).png" },
-    { image: "/assets/image/work image/work (11).png" },
+  const brandDataf1 = [
+    { image: "/assets/image/uiux/f1 (1).jpg" },
+    { image: "/assets/image/uiux/f1 (1).png" },
+    { image: "/assets/image/uiux/f1 (2).png" },
+    { image: "/assets/image/uiux/f1 (3).png" },
+  ];
+  const brandDataf2 = [
+    { image: "/assets/image/uiux/f2 (1).jpg" },
+    { image: "/assets/image/uiux/f2 (1).png" },
+    { image: "/assets/image/uiux/f1 (2).png" },
+    { image: "/assets/image/uiux/f2 (2).png" },
   ];
   const designInfo = [
     {
@@ -149,89 +148,92 @@ const uiux = () => {
   ];
   return (
     <div>
-      <div className="bg-black">
+      <Container bgClassName="bg-black">
         <BrandingBanner
-          heading="User Experience Design Services"
-          description="Your brand, your customers, your unique design challenges. We tailor UI/UX solutions to solve them all quickly and efficiently."
+          heading="User Experience Design/n Services"
+          description="Your brand, your customers, your unique design challenges./nWe tailor UI/UX solutions to solve them all quickly and efficiently."
           buttonText="Design my Product Now"
-          imageSrc="/assets/image/image 7.png"
+          imageSrc="/assets/image/ring 1.png"
           imageAlt="Feedback Background"
           //   onButtonClick={handleButtonClick}
         />
-      </div>
+      </Container>
       <div>
-        <BrandingSection
-          image="/assets/image/image 8.png"
-          title="Digital Product Design & Consulting Services"
-          description={`Your brand's design speaks before you do. 80% of 
-          consumers recognize a brand just by its design & color!
-          We use color psychology to design your brand to be
-          memorable.`}
-          //   reverse={true}
-          buttonText=" Design my Product Now"
-        />
+        <Container>
+          <BrandingSection
+            image="/assets/image/image 8.png"
+            title="Build a customer/n experience, not just/n a product!"
+            description="From clicks to trust, crafted with care. We design/n interfaces that guide users effortlessly, building/n confidence at every point."
+            //   reverse={true}
+            buttonText=" Design my Product Now"
+          />
+        </Container>
       </div>
       <div>
         <DesignSection
-          title="Connect with your audience through intuitive design!"
-          description="We design intuitive UI/UX solutions that connect you with your audience. Whether it’s a website, an app, or a product, we make it easy and engaging."
+          title="Connect with your/n audience through/n intuitive design!"
+          description="We design intuitive UI/UX solutions that connect/n you with your audience. Whether it’s a website,/n an app, or a product, we make it easy and engaging."
           buttonText="Begin Your Journey"
           // buttonAction={handleButtonClick}
           mainImageSrc="/assets/image/image 10.png"
           mainImageAlt="Mobile Design"
-          brandData={brandData}
+          brandData1={brandDataf1}
+          brandData2={brandDataf2}
           //   direction="left"
-          imageHeight={350}
-          imageWidth={350}
+          imageHeight={500}
+          imageWidth={500}
           bgClass={"bg-gradient-to-b from-red-700 to-[#101010]"}
           newClass={"mx-2"}
         />
       </div>
       <div>
         <BrandDesignSection
-          sectionTitle="Why Brand Design Matters for Your Business"
+          sectionTitle="Why Brand Design Matters for/n Your Business"
           designInfo={designInfo}
           backgroundUrl="/assets/image/Group 20.png"
           customClasses="bg-gray-100"
         />
       </div>
       <div>
-        <BrandingServiceList
-          servicesData={servicesData}
-          title="Range of Brand Design Services We Offer"
-          backgroundImage="/assets/image/object1.png"
-          backgroundPosition="right"
-          textColor="text-white"
-          highlightColor="text-yellow-500"
-          iconColor="bg-yellow-500 text-black"
-        />
+        <Container bgClassName="bg-black">
+          <BrandingServiceList
+            servicesData={servicesData}
+            title="Range of UI-UX Services/n We Offer"
+            backgroundImage="/assets/image/object12.png"
+            backgroundPosition="right"
+            textColor="text-white"
+            highlightColor="text-yellow-500"
+            iconColor="bg-yellow-500 text-black"
+          />
+        </Container>
       </div>
       <div>
-        <BrandingSection
-          image="/assets/image/image 8.png"
-          title="Digital Product Design & Consulting Services"
-          description={`Your brand's design speaks before you do. 80% of 
+        <Container>
+          <BrandingSection
+            image="/assets/image/image 11.png"
+            title="We’ll help you enhance/n the user experience/n with research-driven design!"
+            description={`Your brand's design speaks before you do. 80% of 
           consumers recognize a brand just by its design & color!
           We use color psychology to design your brand to be
           memorable.`}
-          //   reverse={true}
-          buttonText=" Design my Product Now"
-        />
+            reverse={true}
+            buttonText=" Design my Product Now"
+          />
+        </Container>
       </div>
       <div>
-        <BrandingSection
-          image="/assets/image/image 8.png"
-          title="Digital Product Design & Consulting Services"
-          description={`Your brand's design speaks before you do. 80% of 
-          consumers recognize a brand just by its design & color!
-          We use color psychology to design your brand to be
-          memorable.`}
-          reverse={true}
-          bgClass={"bg-black"}
-          h2Class={"text-white"}
-          pClass={"text-white"}
-          buttonText=" Design my Product Now"
-        />
+        <Container bgClassName="bg-black">
+          <BrandingSection
+            image="/assets/image/image 12.png"
+            title="UI UX solution: why/n choose Us?"
+            description={`We obsess over user data-driven design and pixel-perfect/n execution. Choose us for anything from intuitive interfaces/n to aesthetic visuals.`}
+            // reverse={true}
+            bgClass={"bg-black"}
+            h2Class={"text-white"}
+            pClass={"text-white"}
+            buttonText=" Design my Product Now"
+          />
+        </Container>
       </div>
       <div>
         <Faq

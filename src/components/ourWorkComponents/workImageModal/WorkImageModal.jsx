@@ -13,7 +13,7 @@ const WorkImageModal = ({ openModal, setOpenModal, title, content }) => {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className={`absolute max-w-4xl rounded-lg bg-white p-6 drop-shadow-lg dark:text-white ${
+        className={`absolute max-w-[90%] rounded-lg bg-white p-6 lg:py-12 drop-shadow-lg dark:text-white ${
           openModal
             ? "opacity-1 duration-300"
             : "scale-110 opacity-0 duration-150"

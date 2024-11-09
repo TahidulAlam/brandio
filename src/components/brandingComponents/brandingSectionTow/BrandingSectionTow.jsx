@@ -1,13 +1,15 @@
 import Button from "@/components/button/Button";
+import TextWithLineBreaks from "@/components/TextWithLineBreaks";
 import Link from "next/link";
 import React from "react";
+import { FaArrowDownLong, FaArrowRightLong } from "react-icons/fa6";
 
 const BrandingSectionTow = () => {
   return (
     <div className="w-full bg-black text-white py-20">
       {/* Container for the heading and description */}
-      <div className="w-[90%] mx-auto mb-10">
-        <div className="flex flex-col justify-start">
+      <div className="mb-10">
+        <div className="flex flex-col justify-start gap-2">
           <h2 className="text-5xl font-bold mb-4">
             Let’s Walk You Through Our Brand <br /> Design Process
           </h2>
@@ -25,50 +27,71 @@ const BrandingSectionTow = () => {
       </div>
 
       {/* Process steps with arrows */}
-      <div className="flex items-start justify-start w-[90%] mx-auto">
+      <div className="flex items-start justify-start lg:w-4/5 w-full">
         {/* Steps Wrapper */}
-        <div className="flex gap-2 items-center justify-start w-full">
+        <div className="flex flex-col lg:flex-row gap-2 items-center justify-start w-full">
           {/* Step 1 */}
-          <div className="flex flex-col items-center bg-zinc-900 py-20 px-16">
-            <p className="text-yellow-500 font-semibold text-center">
-              Identifying target <br /> audience
-            </p>
+          <div className="flex flex-col items-center bg-zinc-900 py-20 w-full">
+            <div className="text-yellow-500 font-semibold text-center">
+              <TextWithLineBreaks text="Identifying target/n audience" />
+            </div>
           </div>
 
           {/* Arrow */}
-          <div className="text-white text-4xl text-center -ml-5 -mr-5 z-10">
-            →
+          <div className="text-white text-4xl text-center -mt-5 -mb-5 lg:-ml-5 lg:-mr-5 z-10">
+            {/* → */}
+            <div className="lg:block hidden">
+              <FaArrowRightLong />
+            </div>
+            <div className="block lg:hidden">
+              <FaArrowDownLong />
+            </div>
           </div>
 
           {/* Step 2 */}
-          <div className="flex flex-col items-center bg-zinc-900 py-20 px-16">
-            <p className="text-yellow-500 font-semibold text-center">
-              Competitor & User <br /> Research
-            </p>
+          <div className="flex flex-col items-center bg-zinc-900 py-20 w-full">
+            <div className="text-yellow-500 font-semibold text-center">
+              {/* Competitor & User <br /> Research */}
+              <TextWithLineBreaks text="Competitor & User/n Research " />
+            </div>
           </div>
 
           {/* Arrow */}
-          <div className="text-white text-4xl text-center -ml-5 -mr-5 z-10">
-            →
+          <div className="text-white text-4xl text-center -mt-5 -mb-5 lg:-ml-5 lg:-mr-5 z-10">
+            {/* → */}
+            <div className="lg:block hidden">
+              <FaArrowRightLong />
+            </div>
+            <div className="block lg:hidden">
+              <FaArrowDownLong />
+            </div>
           </div>
 
           {/* Step 3 */}
-          <div className="flex flex-col items-center bg-zinc-900 py-20 px-16">
-            <p className="text-yellow-500 font-semibold text-center">
-              Brand Model & <br /> Strategy
-            </p>
+          <div className="flex flex-col items-center bg-zinc-900 py-20 w-full">
+            <div className="text-yellow-500 font-semibold text-center">
+              {/* Brand Model & <br /> Strategy */}
+              <TextWithLineBreaks text="Brand Model &/n Strategy" />
+            </div>
           </div>
 
           {/* Arrow */}
-          <div className="text-white text-4xl text-center -ml-5 -mr-5 z-10">
-            →
+          <div className="text-white text-4xl text-center -mt-5 -mb-5 lg:-ml-5 lg:-mr-5 z-10">
+            {/* → */}
+            <div className="lg:block hidden">
+              <FaArrowRightLong />
+            </div>
+            <div className="block lg:hidden">
+              <FaArrowDownLong />
+            </div>
           </div>
 
           {/* Step 4 */}
-          <div className="flex flex-col items-center bg-zinc-900 py-20 px-16">
-            <p className="text-yellow-500 font-semibold text-center">
-              Brand Guideline & <br /> Launch
-            </p>
+          <div className="flex flex-col items-center bg-zinc-900 py-20 w-full">
+            <div className="text-yellow-500 font-semibold text-center">
+              {/* Brand Guideline & <br /> Launch */}
+              <TextWithLineBreaks text="Brand Guideline &/n Launch" />
+            </div>
           </div>
         </div>
       </div>

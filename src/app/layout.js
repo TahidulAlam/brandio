@@ -4,6 +4,8 @@ import Footer from "@/components/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import SmoothScroll from "@/components/SmoothScrolling";
+import Container from "@/components/container/Container";
+import SmoothScrollingLeis from "@/components/SmoothScrollingLeis";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,7 +20,12 @@ const geistMono = localFont({
 const Sora = localFont({
   src: "./fonts/Sora-Regular.ttf",
   variable: "--font-sora-regular",
-  weight: "400",
+  weight: "100 1000",
+});
+const Aeonic = localFont({
+  src: "./fonts/AeonikTRIAL-Regular.otf",
+  variable: "--font-aeonik-regular",
+  weight: "100 1000",
 });
 
 export const metadata = {
@@ -29,13 +36,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html className="scroll-smooth" lang="en">
-      <body className={`${Sora.variable} antialiased`}>
+      <body className={`${Aeonic.variable} antialiased`}>
         <Navbar />
         {children}
+        {/* <SmoothScrollingLeis>{children}</SmoothScrollingLeis> */}
         {/* <SmoothScroll>{children}</SmoothScroll> */}
         {/* <SmoothScrolling>{children}</SmoothScrolling> */}
         {/* <div></div> */}
-        <Footer />
+        <Container bgClassName={"bg-black"}>
+          <Footer />
+        </Container>
       </body>
     </html>
   );
