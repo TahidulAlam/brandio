@@ -8,6 +8,7 @@ const BrandDesignSection = ({
   designInfo,
   backgroundUrl,
   customClasses = "",
+  classNameP,
 }) => {
   return (
     <section
@@ -24,7 +25,7 @@ const BrandDesignSection = ({
         {sectionTitle && (
           <header className="lg:text-start text-center lg:mb-12 mb-5">
             <div className="lg:text-5xl text-xl font-extrabold text-black leading-snug">
-              <TextWithLineBreaks text={sectionTitle} />
+              <TextWithLineBreaks text={sectionTitle} classNameP={classNameP} />
             </div>
             {sectionSubtitle && (
               <div className="text-lg font-medium text-gray-600 mt-4">

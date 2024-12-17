@@ -151,7 +151,7 @@ const DropDown = () => {
             />
           </div>
 
-          <div className="flex flex-col items-center lg:items-end gap-4 lg:gap-5 w-full lg:w-auto">
+          <div className="flex flex-col items-center lg:items-end gap-4 lg:gap-5 w-full lg:w-auto lg:mt-16 lg:mr-14 mr-0">
             {imageData.map((item) => (
               <Link href={item.link} key={item.name}>
                 <span

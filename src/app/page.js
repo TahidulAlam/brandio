@@ -9,13 +9,18 @@ import VideoBan from "@/components/home/video-banner/VideoBan";
 import VideoBanner from "@/components/home/video-banner/VideoBanner";
 import Portfolio from "@/components/home/portfolio/Portfolio";
 import InquryBanner from "@/components/home/inquery-banner/InquryBanner";
+import SmoothScrollComponent from "@/components/SmoothScrollComponent";
 
 export default function Home() {
   return (
     <>
+      {/* <SmoothScrollComponent scrollSettings="duration:0.7 ease:power2.out smoother:on">
+      </SmoothScrollComponent> */}
       <Container bgClassName="bg-black">
         <HeroBanner />
       </Container>
+      {/* <SmoothScrollComponent scrollSettings="duration:0.7 ease:power2.out smoother:on">
+      </SmoothScrollComponent> */}
       <div className="lg:mt-20 mt-4 lg:mb-20 mb-0">
         <BrandingPartner
           mainTitle={"100+ Branding Partner"}
@@ -27,6 +32,8 @@ export default function Home() {
       <div className="mb-2 lg:mb-0">
         <VideoBanner />
       </div>
+      {/* <SmoothScrollComponent scrollSettings="duration:0.7 ease:power2.out smoother:on">
+      </SmoothScrollComponent> */}
       <div className="bg-black lg:pt-3 pt-5">
         <Services />
       </div>

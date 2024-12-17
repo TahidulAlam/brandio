@@ -8,7 +8,7 @@ import Container from "@/components/container/Container";
 import InquryBanner from "@/components/home/inquery-banner/InquryBanner";
 import React from "react";
 
-const uiux = () => {
+const uiUx = () => {
   const brandDataf1 = [
     { image: "/assets/image/uiux/f1 (1).jpg" },
     { image: "/assets/image/uiux/f1 (1).png" },
@@ -251,4 +251,4 @@ const uiux = () => {
   );
 };
 
-export default uiux;
+export default uiUx;

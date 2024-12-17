@@ -37,15 +37,15 @@ const BrandingPartner = ({ mainTitle, subtitle }) => {
   ];
   return (
     <div>
-      <div className="flex flex-col justify-center items-center w-[90%] mx-auto mt-10 ">
-        <h1 className="font-bold text-3xl">{mainTitle}</h1>
+      <div className="flex flex-col justify-center items-center w-[90%] mx-auto my-12 ">
+        <h1 className="font-bold text-3xl lg:pb-2 text-center">{mainTitle}</h1>
         <h1 className="text-center">{subtitle}</h1>
       </div>
       <div className="my-10 flex flex-col gap-5">
         <div>
           <LogoMarquee
             brandData={brandDatas1}
-            imageHeight={50}
+            imageHeight={60}
             imageWidth={80}
             direction={"left"}
             layout={"fixed"}
@@ -55,7 +55,7 @@ const BrandingPartner = ({ mainTitle, subtitle }) => {
         <div>
           <LogoMarquee
             brandData={brandDatas2}
-            imageHeight={50}
+            imageHeight={60}
             imageWidth={80}
             direction={"right"}
             layout={"fixed"}

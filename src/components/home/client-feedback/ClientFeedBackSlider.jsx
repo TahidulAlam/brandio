@@ -9,43 +9,43 @@ import FeedBackCard from "./FeedBackCard";
 const reviews = [
   {
     id: 1,
-    name: "John Doe",
-    designation: "Chief Marketing Officer",
+    name: "Nedin Zahirovic",
+    designation: "Co-Founder, Konoom, Europe",
     review:
       "We were happy that we found the best UI/UX Design agency and best product design agency to work with. We will definitely continue to work with them as we have greatest output.",
-    image: "/assets/image/Client Review.png",
+    image: "/assets/image/Client Image/Nedin-Zahirovic.png",
   },
   {
     id: 2,
-    name: "Jane Smith",
-    designation: "Chief Marketing Officer",
+    name: "Sabbir Ahmed",
+    designation: "Product Manager, Mircus, China",
     review:
-      "We were happy that we found the best UI/UX Design agency and best product design agency to work with. We will definitely continue to work with them as we have greatest output.",
-    image: "/assets/image/Client Review.png",
+      "Brandio efficiently, positively, and actively managed the workflow and communication. Overall, they were professional designers who delivered quality outcomes.",
+    image: "/assets/image/Client Image/Sabbir Ahmed.png",
   },
   {
     id: 3,
-    name: "Samuel Jones",
-    designation: "Chief Marketing Officer",
+    name: "Rejaul Karim",
+    designation: "CEO, Nature Corner BD, Bangladesh",
     review:
-      "We were happy that we found the best UI/UX Design agency and best product design agency to work with. We will definitely continue to work with them as we have greatest output.",
-    image: "/assets/image/Client Review.png",
+      "Their ability to produce high-quality, on-brand design elements and animation within days was a game changer!",
+    image: "/assets/image/Client Image/Rejaul-Karim.png",
   },
   {
     id: 4,
-    name: "Anna Williams",
-    designation: "Chief Marketing Officer",
+    name: "Reshad Kaka Falah",
+    designation: "CEO, Maryam Amiri, Denmark",
     review:
-      "We were happy that we found the best UI/UX Design agency and best product design agency to work with. We will definitely continue to work with them as we have greatest output.",
-    image: "/assets/image/Client Review.png",
+      "Their creativity and strategic thinking have given us a clear visual identity, making our branding efforts so much easier. Great experience!",
+    image: "/assets/image/Client Image/Reshad-Kaka-Falah.png",
   },
   {
     id: 5,
-    name: "Michael Brown",
-    designation: "Chief Marketing Officer",
+    name: "Hridoy Islam",
+    designation: "CEO, Saaiq Corporation, Bangladesh",
     review:
-      "We were happy that we found the best UI/UX Design agency and best product design agency to work with. We will definitely continue to work with them as we have greatest output.",
-    image: "/assets/image/Client Review.png",
+      "They understood our needs from the get-go and created a design that not only looks stunning but also aligns perfectly with our core values. It’s been a pleasure working with such a dedicated team!",
+    image: "/assets/image/Client Image/Anisul-Islam.png",
   },
 ];
 

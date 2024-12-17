@@ -8,7 +8,7 @@ import Container from "@/components/container/Container";
 import InquryBanner from "@/components/home/inquery-banner/InquryBanner";
 import React from "react";
 
-const webdesign = () => {
+const webDesign = () => {
   const brandData1 = [
     { image: "/assets/image/webdesign/serial1 (1).png" },
     { image: "/assets/image/webdesign/serial1 (2).png" },
@@ -255,4 +255,4 @@ with your visitors.`}
   );
 };
 
-export default webdesign;
+export default webDesign;

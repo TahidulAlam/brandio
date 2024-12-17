@@ -79,6 +79,7 @@ const BrandingSection = ({
   bgClass = "",
   h2Class = "",
   pClass = "",
+  classNameP = "",
 }) => {
   return (
     <div
@@ -106,14 +107,14 @@ const BrandingSection = ({
         }`}
       >
         <div
-          className={`text-2xl md:text-3xl lg:text-4xl font-bold text-black ${h2Class}`}
+          className={`text-2xl md:text-3xl lg:text-5xl font-bold text-black ${h2Class}`}
         >
-          <TextWithLineBreaks text={title} />
+          <TextWithLineBreaks classNameP={classNameP} text={title} />
         </div>
         <div
           className={`text-base md:text-lg text-gray-700 leading-relaxed ${pClass}`}
         >
-          <TextWithLineBreaks text={description} />
+          <TextWithLineBreaks classNameP={classNameP} text={description} />
         </div>
         <div>
           <Button>{buttonText}</Button>

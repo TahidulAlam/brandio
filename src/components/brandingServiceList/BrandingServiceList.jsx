@@ -47,11 +47,11 @@ const BrandingServiceList = ({
   }, [openCategories]);
 
   return (
-    <section className={` bg-black ${textColor} grid grid-cols-6 py-10 pb-24 `}>
+    <section className={` bg-black ${textColor} grid grid-cols-7 py-10 pb-24 `}>
       {/* Background Image */}
 
       {/* Content */}
-      <div className="relative z-10 lg:col-span-3 col-span-6 ">
+      <div className="relative z-10 lg:col-span-4 col-span-7 ">
         <div className="text-3xl md:text-5xl font-bold lg:mb-5 mb-0 text-center md:text-left lg:py-10 py-5 text-nowrap">
           <TextWithLineBreaks text={title} />
         </div>
@@ -106,13 +106,15 @@ const BrandingServiceList = ({
           </div>
         ))}
       </div>
-      <div className={` opacity-70 hidden md:block col-span-3 z-0`}>
+      <div
+        className={` opacity-70 hidden md:block col-span-3 absolute right-0 mt-40 mr-36 z-0`}
+      >
         <div className="flex justify-center items-center h-full">
           <Image
             src={backgroundImage}
             alt="Background Image"
-            width={600}
-            height={600}
+            width={700}
+            height={700}
             className="object-contain"
           />
         </div>

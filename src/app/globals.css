@@ -22,7 +22,10 @@ body {
   background: var(--background); */
   font-family: var(--font-sora-regular);
 }
-
+html {
+  scroll-behavior: smooth;
+  transition: scroll-behavior 0.5s;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

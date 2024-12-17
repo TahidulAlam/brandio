@@ -43,7 +43,7 @@ const ServicesCard = ({
 
           {/* Title */}
           <span
-            className="lg:text-5xl text-3xl text-nowrap overflow-hidden font-bold text-gray-400 transition-colors duration-500 ease-in-out group-hover:text-white"
+            className="lg:text-5xl text-2xl text-nowrap overflow-hidden font-bold text-gray-400 transition-colors duration-500 ease-in-out group-hover:text-white"
             style={{
               // lineHeight: "1.2",
               // fontSize: "3rem",
@@ -81,13 +81,13 @@ const ServicesCard = ({
             : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="overflow-hidden lg:w-full w-80 lg:pr-4 pr-0 lg:text-lg text-zinc-200 font-light text-xs lg:px-5 px-0 lg:-mr-5 ml-12 lg:m-0">
+        <div className="overflow-hidden lg:w-full w-[70%] text-justify lg:pr-4 pr-0 lg:text-lg text-zinc-200 font-light text-xs lg:px-5 px-0 lg:-mr-5 ml-12 lg:m-0">
           {description}
         </div>
         <div className="lg:ml-4 ml-12 lg:mt-0 mt-3">
           <Button
             children={"Learn More"}
-            className="lg:mt-5 mt-1 rounded-3xl font-semibold bg-yellow-400 lg:px-4 px-5 py-3 lg:py-2 lg:text-base text-[12px] text-black duration-300 active:scale-95"
+            // className="lg:mt-5 mt-1 rounded-3xl font-semibold bg-yellow-400 lg:px-4 px-5 py-3 lg:py-2 lg:text-base text-[12px] text-black duration-300 active:scale-95"
           />
         </div>
       </div>

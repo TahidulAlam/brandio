@@ -459,7 +459,7 @@ const Navbarlink = () => {
         <div className="z-50 col-span-2 hidden lg:flex justify-end items-center">
           <Button
             onClick={handleClickNav}
-            className="rounded-3xl font-semibold bg-yellow-400 px-3 py-2 text-xs text-black duration-300 active:scale-95"
+            // className="rounded-3xl font-semibold bg-yellow-400 px-3 py-2 text-xs text-black duration-300 active:scale-95"
           >
             Contact Us
           </Button>

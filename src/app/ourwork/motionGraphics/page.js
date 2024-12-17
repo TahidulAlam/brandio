@@ -21,7 +21,7 @@ const motionGraphics = () => {
         <div>
           <TextWithLineBreaks
             text="Make your Brand Real with/n attractive Motion."
-            className="text-5xl font-bold text-center mb-4"
+            classNameP="text-5xl font-bold text-center mb-4"
           />
         </div>
         <div className="flex justify-center lg:gap-20 gap-2">

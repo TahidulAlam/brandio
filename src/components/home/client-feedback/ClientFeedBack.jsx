@@ -8,7 +8,7 @@ const ClientFeedBackSlider = dynamic(() => import("./ClientFeedBackSlider"), {
 
 const ClientFeedBack = () => {
   return (
-    <div className="relative lg:h-[600px] h-[400px]">
+    <div className="relative lg:h-[650px] h-[400px]">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -20,7 +20,7 @@ const ClientFeedBack = () => {
         />
       </div>
       {/* Content Container */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 lg:py-14">
         {/* Header */}
         <h2 className="text-3xl font-bold text-black mb-6 mt-10">
           Clients Feedback

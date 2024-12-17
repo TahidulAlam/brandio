@@ -180,11 +180,12 @@ const branding = () => {
       <Container bgClassName="bg-white">
         <BrandingSection
           image="/assets/image/image 8.png"
-          title="Design Speaks Louder Than Words"
+          title="Design Speaks Louder/n Than Words"
           description={`Your brand's design speaks before you do. 80% of 
           consumers recognize a brand just by its design & color!
           We use color psychology to design your brand to be
           memorable.`}
+          classNameP="mb-4"
           // bgClass={"bg-black"}
           //   reverse={true}
           buttonText=" Design my Product Now"
@@ -232,17 +233,18 @@ memorable to customers.`}
       </div>
       <div>
         <BrandDesignSection
-          sectionTitle="Why Brand Design Matters for Your Business"
+          sectionTitle="Why Brand Design Matters for/n Your Business"
           designInfo={designInfo}
           backgroundUrl="/assets/image/Group 20.png"
           customClasses="bg-gray-100"
+          classNameP="mb-4"
         />
       </div>
       <div>
         <Container bgClassName="bg-black">
           <BrandingServiceList
             servicesData={servicesData}
-            title="Range of Brand Design/n Services We Offer"
+            title="Range of Brand Design Services/n We Offer"
             backgroundImage="/assets/image/object1.png"
             backgroundPosition="right"
             textColor="text-white"

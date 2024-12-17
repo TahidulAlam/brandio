@@ -10,13 +10,15 @@ const BrandingSectionTow = () => {
       {/* Container for the heading and description */}
       <div className="mb-10">
         <div className="flex flex-col justify-start gap-2">
-          <h2 className="text-5xl font-bold mb-4">
-            Let’s Walk You Through Our Brand <br /> Design Process
-          </h2>
-          <p className="text-gray-400">
-            The process of branding and design follows a certain chronological
-            order.
-          </p>
+          <div className="text-5xl font-bold mb-4">
+            <TextWithLineBreaks text="Let’s Walk You Through Our Brand/n Design Process" />
+          </div>
+          <div className="text-gray-400">
+            <TextWithLineBreaks
+              text="The process of branding and design follows a certain chronological
+            order."
+            />
+          </div>
           {/* Button */}
           <div>
             <Button className="mt-6 py-3 px-6 bg-yellow-500 rounded-full text-black font-semibold hover:bg-yellow-400 transition-colors">
